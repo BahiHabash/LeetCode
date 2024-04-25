@@ -11,7 +11,7 @@
  * @param {ListNode} headB
  * @return {ListNode}
  */
-const getIntersectionNode = function(headA, headB) { // O(n) time | O(1) space
+const getIntersectionNode = function(headA, headB) { // O(n + m) time | O(1) space
     // mark list A
     markList(headA);    
     // get intersection node if exited
