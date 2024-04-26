@@ -3,11 +3,15 @@
  * @param {number} k
  * @return {number}
  */
+// Complixty : 
+// Time  : O(n)
+// Space : O(1)
 var maxVowels = function(s, k) {
     const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
-    let numOfCurrVowels = 0;
-    let maxNum = 0;
+    let numOfCurrVowels = 0
+      , maxNum = 0;
 
+    // pick the initial window of length k
     for (let i = 0; i < k; i++)
         numOfCurrVowels += vowels.has(s[i]);
 
