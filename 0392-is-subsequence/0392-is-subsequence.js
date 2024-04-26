@@ -3,25 +3,17 @@
  * @param {string} t
  * @return {boolean}
  */
-const isSubsequence = function(s, t) {   
-    if (s.length > t.length)
-        return false;
-    
+const isSubsequence = function(s, t) {
     let i = 0
-       ,j = 0;
+      , remainingOfT = t;
     
-    while ((i < s.length) && (j < t.length)) {
-        currChar = s[i];
+    for (const char of s) {
+        remainingOfT = remainingOfT.slice(i);
+        i = remainingOfT.indexOf(char) + 1;
         
-        while ((j < t.length) && (t[j] !== currChar))
-            j++;
-        
-        if (j >= t.length && i < s.length)
+        if (i === 0)
             return false;
-        
-        i++, j++;
     }
-
     
-    return i === s.length;
+    return true;
 };
