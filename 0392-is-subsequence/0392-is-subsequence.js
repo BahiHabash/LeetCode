@@ -4,16 +4,16 @@
  * @return {boolean}
  */
 const isSubsequence = function(s, t) {
-    let i = 0
-      , remainingOfT = t;
-    
-    for (const char of s) {
-        remainingOfT = remainingOfT.slice(i);
-        i = remainingOfT.indexOf(char) + 1;
-        
-        if (i === 0)
-            return false;
-    }
-    
-    return true;
+  let rStr = t;                  // rStr for remaining string of t
+
+  for(let i=0; i<s.length; i++){
+    const char = s[i];
+      
+    if(!rStr.includes(char))
+      return false;
+      
+    rStr = rStr.slice(rStr.indexOf(s[i]) + 1)
+  }
+
+  return true;
 };
