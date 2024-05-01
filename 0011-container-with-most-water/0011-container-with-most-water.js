@@ -14,13 +14,8 @@ const maxArea = function(height) {
         
         if (height[l] < height[r])
             l++;
-        else if (height[r] < height[l])
-            r--;
-        else if(height[l] < height[l + 1])
-            l++;
         else
             r--;
-
     }
 
     return mostWater;
