@@ -3,12 +3,10 @@
  * @return {number}
  */
 const singleNumber = function(nums) { // Time : O(n * log(n)) , Space : O(1)
-    nums.sort((a, b) => a - b);
+    const uniqueNums = [...new Set(nums)]
     
-    for (let i = 0; i < nums.length - 1; i += 2) {
-        if (nums[i] !== nums[i + 1])
-            return nums[i];
-    }
+    const summition = nums.reduce((acc, n) => acc + n, 0);
+    const desiredSummition = uniqueNums.reduce((acc, n) => acc + n, 0) * 2;
     
-    return nums.at(-1)
+    return desiredSummition - summition;
 };
