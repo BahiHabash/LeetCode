@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const singleNumber = function(nums) { // Time : O(n) , Space : O(n)
+const singleNumber = function(nums) { // Time : O(n * log(n)) , Space : O(1)
     nums.sort((a, b) => a - b);
     
     for (let i = 0; i < nums.length - 1; i += 2) {
