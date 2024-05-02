@@ -3,10 +3,12 @@
  * @return {number}
  */
 const singleNumber = function(nums) { // Time : O(n) , Space : O(n)
-    const numsMap = new Map();
-
-    for (const n of nums)
-        numsMap.set(n, (numsMap.get(n) || 0) + 1);
+    nums.sort((a, b) => a - b);
     
-    return [...numsMap.entries()].find(([num, times]) => times === 1)[0];
+    for (let i = 0; i < nums.length - 1; i += 2) {
+        if (nums[i] !== nums[i + 1])
+            return nums[i];
+    }
+    
+    return nums.at(-1)
 };
