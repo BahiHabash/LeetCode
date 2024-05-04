@@ -3,18 +3,19 @@
  * @return {number[]}
  */
 const productExceptSelf = function(nums) {
-    const [zeros, nonZerosProduct] = nums.reduce((acc, n) => {
-        if (n === 0)
-            return [++acc[0], acc[1]];
-        else
-            return [acc[0], acc[1] * n];
-    }, [0, 1]);
+    const answer = [];
 
-    if (zeros > 1)
-        return nums.map(n => 0);
+    let prefix = 1;
+    for (let i = 0; i < nums.length; i++) {
+        answer[i] = prefix;
+        prefix *= nums[i];
+    }
 
-    if (zeros === 1)
-        return nums.map(n => n === 0 ? nonZerosProduct : 0);
+    let suffix = 1;
+    for (let i = nums.length - 1; i >= 0; i--) {
+        answer[i] *= suffix;
+        suffix *= nums[i];
+    }
 
-    return nums.map(n => nonZerosProduct * (n ** -1));
+    return answer;
 };
