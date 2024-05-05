@@ -12,32 +12,22 @@
  */
 const removeNthFromEnd = function(head, n) {
     const dummy = new ListNode(0, head);
-    let steps = getLength(head) - n;
-    let prev = dummy
-    let curr = head;
+    let prev = dummy;
+    let slow = head;
+    let fast = head;
 
-    while (steps) {
-        prev = curr;
-        curr = curr.next;
-        steps--;
+    for (let i = 1; i <= n; i++)
+        fast = fast.next;
+
+    while (fast) {
+        fast = fast.next;
+        prev = slow;
+        slow = slow.next;
     }
 
-    deleteNode(prev, curr);
+    deleteNode(prev, slow);
 
     return dummy.next;    
-};
-
-/**
-* @param {ListNode} head
- */
-const getLength = function(head) {
-    let node = head
-      , length = 0;
-    while (node) {
-        node = node.next;
-        length++;
-    }
-    return length;
 };
 
 /**
