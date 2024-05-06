@@ -3,8 +3,19 @@
  * @return {number}
  */
 const findPeakElement = function(nums) {
-    for (let i = 0; i < nums.length; i++) {
-        if (((nums[i - 1] ?? -Infinity) < nums[i]) && (nums[i] > (nums[i + 1] ?? -Infinity)))
-            return i;
+    let l = 0, r = nums.length - 1;
+    let mid;
+
+    while (l <= r) {
+        mid = Math.floor((l + r) / 2);
+
+        if (((nums[mid - 1] ?? -Infinity) < nums[mid]) && (nums[mid] > (nums[mid + 1] ?? -Infinity)))
+            return mid;
+        else if ((nums[mid - 1] ?? -Infinity) < nums[mid])
+            l = mid + 1;
+        else 
+            r = mid - 1;
     }
+        
+    return mid;
 };
