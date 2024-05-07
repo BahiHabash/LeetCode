@@ -9,33 +9,49 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-const doubleIt = function(head) { // Time : O(n) | Space : O(n) | n : number of digits
-    let num = 0n;
-    let node = head;
+const doubleIt = function(head) { // Time : O(n) | Space : O(1) | n : number of digits
+    const reversedLL = reverseLL(head);
+    let prev
+      , curr = reversedLL
+      , carry = 0;
 
-    while (node) {
-        num *= 10n;
-        num += BigInt(node.val);
-        node = node.next;
+    while (curr || carry) {
+        if (curr) {
+            const doublingNum = curr.val * 2 + carry;
+            if (doublingNum < 9)
+                curr.val = doublingNum;
+            else
+                curr.val = doublingNum % 10;
+            carry = Math.floor(doublingNum / 10);
+        }
+        else {
+            curr = new ListNode(carry);
+            prev.next = curr;
+            carry = 0;
+        }
+
+        prev = curr;
+        curr = curr.next;
     }
 
-    return numToLL(num * 2n);
+    return reverseLL(reversedLL);
 };
 
 /**
-* @param {number} num
+* @param {ListNode} head
 * @return {ListNode}
- */
-const numToLL = function(num) {
-    const digits = [...('' + num)];
-    const dummy = new ListNode(0);
-    let node = dummy;
+*/
+const reverseLL = function(head) {
+    let prev = null;
+    let curr = head;
+    let next;
 
-    for (const digit of digits) {
-        node.next = new ListNode(+digit);
-        node = node.next;
+    while (curr) {
+        next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
     }
 
-    return dummy.next;
+    return prev;
 }
-
