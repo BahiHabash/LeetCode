@@ -15,19 +15,19 @@ const doubleIt = function(head) { // Time : O(n) | Space : O(1) | n : number of 
       , curr = reversedLL
       , carry = 0;
 
-    while (curr || carry) {
-        if (curr) {
-            const doublingNum = curr.val * 2 + carry;
-            if (doublingNum < 9)
-                curr.val = doublingNum;
-            else
-                curr.val = doublingNum % 10;
-            carry = Math.floor(doublingNum / 10);
-        }
-        else {
-            curr = new ListNode(carry);
-            prev.next = curr;
-            carry = 0;
+    while (curr) {
+        const doublingNum = curr.val * 2 + carry;
+
+        if (doublingNum < 9)
+            curr.val = doublingNum;
+        else
+            curr.val = doublingNum % 10;
+        
+        carry = Math.floor(doublingNum / 10);
+
+        if (!curr.next && carry) {
+            curr.next = new ListNode(carry);
+            break;
         }
 
         prev = curr;
