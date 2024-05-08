@@ -2,7 +2,7 @@
  * @param {number[]} score
  * @return {string[]}
  */
-const findRelativeRanks = function(score) { // Time : O(n * log(n)) | Space : O(1) -> if we ignore space of sorting
+const findRelativeRanks = function(score) { // Time : O(n * log(n)) | Space : O(n)
     const map = new Map();
     ([...score].sort((a, b) => b - a)).forEach((n, i)=> map.set(n, i + 1));
     return score.map((n) => {
