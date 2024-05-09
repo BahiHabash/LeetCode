@@ -3,22 +3,22 @@
  * @param {number[]} B
  * @return {number[]}
  */
-const findThePrefixCommonArray = function(A, B) { // Time < O(n ^ 2) | Space < O(n)
-    const Aset = new Set();
-    const Bset = new Set();
+const findThePrefixCommonArray = function(A, B) { // Time = O(n ^ 2) | Space = O(n)
     const prefixCommon = [];
+    const map = new Map();
     let commons = 0;
 
     for (let i = 0; i < A.length; i++) {
-        Aset.add(A[i]);
-        Bset.add(B[i]);
-        for (const n of Aset) {
-            if (Bset.has(n)) {
+        map.set(A[i], (map.get(A[i]) ?? 0) + 1);
+        map.set(B[i], (map.get(B[i]) ?? 0) - 1);
+
+        for (const [key, val] of map.entries()) {
+            if (val === 0) {
                 commons++;
-                Aset.delete(n);
-                Bset.delete(n);
+                map.delete(key);
             }
         }
+        
         prefixCommon.push(commons);
     }
 
