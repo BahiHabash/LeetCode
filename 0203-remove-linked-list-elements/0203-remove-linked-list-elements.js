@@ -12,12 +12,12 @@
  */
 const removeElements = function(head, val) {
     const dummy = new ListNode(0, head);
-    let prev = dummy
-      , curr = head;
+    let prev = dummy;
+    let curr = head;
 
     while (curr) {
         if (curr.val === val){
-            curr = deleteNode(prev, curr);
+            curr = removeNode(prev, curr);
         }
         else {
             prev = curr;
@@ -28,7 +28,8 @@ const removeElements = function(head, val) {
     return dummy.next;
 };
 
-const deleteNode = function(prev, node) {
-    prev.next = node.next;
-    return prev.next;
+const removeNode = function(prev, node) {
+    if(prev && node)
+        prev.next = node.next;
+    return prev;
 }
