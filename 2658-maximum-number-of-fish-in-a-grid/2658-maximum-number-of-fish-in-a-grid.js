@@ -2,7 +2,7 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const findMaxFish = function(grid) {
+const findMaxFish = function(grid) { // Time : O(n * m), Space : O(1)
     // Handle edge cases (empty and null grid)
     if ((!grid) || (grid.length === 0) || (grid[0].length === 0)) {
         return 0;
@@ -11,7 +11,6 @@ const findMaxFish = function(grid) {
     let maxFish = 0;
     const m = grid.length;
     const n = grid[0].length;
-    const visited = new Array(m).fill(null).map(() => new Array(n).fill(false));
 
     /**
      * Checks if the given cell is within the grid boundaries.
@@ -30,8 +29,8 @@ const findMaxFish = function(grid) {
      * @return {number} The total number of fish in the connected component.
      */
     const dfs = function(row, col) {
-        visited[row][col] = true;
         let currentFishCount = grid[row][col];
+        grid[row][col] = 0;
         const directions = [
             [0, 1],  // right
             [0, -1], // left
@@ -42,7 +41,7 @@ const findMaxFish = function(grid) {
         for (const [dr, dc] of directions) {
             const newRow = row + dr;
             const newCol = col + dc;
-            if ((inBoundry(newRow, newCol)) && (grid[newRow][newCol] > 0) && (!visited[newRow][newCol])) {
+            if ((inBoundry(newRow, newCol)) && (grid[newRow][newCol] > 0)) {
                 currentFishCount += dfs(newRow, newCol);
             }
         }
@@ -53,7 +52,7 @@ const findMaxFish = function(grid) {
     // Iterate through the grid to find the connected components with the maximum fish
     for (let row = 0; row < m; row++) {
         for (let col = 0; col < n; col++) {
-            if ((grid[row][col] > 0) && (!visited[row][col])) {
+            if (grid[row][col] > 0) {
                 maxFish = Math.max(dfs(row, col), maxFish);
             }
         }
