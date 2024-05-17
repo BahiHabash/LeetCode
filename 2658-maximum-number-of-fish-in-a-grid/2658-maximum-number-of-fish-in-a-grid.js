@@ -1,62 +1,59 @@
 /**
  * @param {number[][]} grid
- * @return {number}
+ * @return {number} maximum number of catched fish
  */
-const findMaxFish = function(grid) { // Time : O(n * m), Space : O(1)
+const findMaxFish = function(grid) { //BFS, Time : O(n * m), Space : O(1)
     // Handle edge cases (empty and null grid)
-    if ((!grid) || (grid.length === 0) || (grid[0].length === 0)) {
+    if (!grid || !grid.length || !grid[0].length)
         return 0;
-    }
 
-    let maxFish = 0;
+    let maxCatchedFish = 0;
     const m = grid.length;
     const n = grid[0].length;
+    const directions = [[0, 1], [0, -1], [1, 0], [-1, 0]];
 
-    /**
-     * Checks if the given cell is within the grid boundaries.
-     * @param {number} row - The row index.
-     * @param {number} col - The column index.
-     * @return {boolean} True if the cell is within boundaries, False otherwise.
+    /** Check if the cell's indecies is in grid boundires
+     * @param {number} row    row index
+     * @param {number} column coulmn index
+     * @return {boolean} True if cell's indeces within grid boundries, False otherwise
      */
-    const inBoundry = function(row, col) {
-        return (row >= 0) && (col >= 0) && (row < m) && (col < n);
-    };
+    const isInBoundry = function(row, column) {
+        return row >= 0 && column >= 0 && row < m && column < n;
+    }
 
-    /**
-     * Performs depth-first search to calculate the number of fish in a connected component.
-     * @param {number} row - The starting row index.
-     * @param {number} col - The starting column index.
-     * @return {number} The total number of fish in the connected component.
+    /** Perform BFS on the grid
+     * @param {number} r starting index of rows
+     * @param {number} c starting index of columns
+     * @return {number} count of fish in current island
      */
-    const dfs = function(row, col) {
-        let currentFishCount = grid[row][col];
-        grid[row][col] = 0;
-        const directions = [
-            [0, 1],  // right
-            [0, -1], // left
-            [1, 0],  // down
-            [-1, 0]  // up
-        ];
-
-        for (const [dr, dc] of directions) {
-            const newRow = row + dr;
-            const newCol = col + dc;
-            if ((inBoundry(newRow, newCol)) && (grid[newRow][newCol] > 0)) {
-                currentFishCount += dfs(newRow, newCol);
+    const BFS = function(r, c) {
+        const queue = [[r, c]];
+        let fishCount = grid[r][c];
+        grid[r][c] = 0;
+        
+        while (queue.length) {
+            const [row, column] = queue.shift();
+            for (let [nr, nc] of directions) {
+                nr += row, nc += column;
+                if (isInBoundry(nr, nc) && grid[nr][nc] > 0){
+                    fishCount += grid[nr][nc];
+                    queue.push([nr, nc]);
+                    grid[nr][nc] = 0;
+                }
             }
         }
 
-        return currentFishCount;
-    };
-
-    // Iterate through the grid to find the connected components with the maximum fish
-    for (let row = 0; row < m; row++) {
-        for (let col = 0; col < n; col++) {
-            if (grid[row][col] > 0) {
-                maxFish = Math.max(dfs(row, col), maxFish);
+        return fishCount;
+    }
+    
+    // Iterate over grid cells
+    for (let r = 0; r < m; r++) {
+        for (let c = 0; c < n; c++) {
+            if (grid[r][c] > 0) {
+                maxCatchedFish = Math.max(BFS(r, c), maxCatchedFish);
             }
         }
     }
 
-    return maxFish;
+    return maxCatchedFish;
 };
