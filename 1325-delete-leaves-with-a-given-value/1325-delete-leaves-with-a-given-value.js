@@ -12,17 +12,9 @@
  * @return {TreeNode}
  */
 const removeLeafNodes = function(root, target) {
-    return removeLeafNodesHelper(root, target);
-};
-/**
- * @param {TreeNode} root
- * @param {number} target
- * @return {TreeNode} root
- */
-const removeLeafNodesHelper = function(root, target) {
     if (root) {
-        removeLeafNodesHelper(root.left, target);
-        removeLeafNodesHelper(root.right, target);
+        removeLeafNodes(root.left, target);
+        removeLeafNodes(root.right, target);
         
         if (root.left?.val === target && isLeaf(root.left)) {
             const next = root.left;
