@@ -17,20 +17,28 @@ const maxAreaOfIsland = function(grid) { // Time : O(n * m) | Space : O(1)
         return (row >= 0) && (column >= 0) && (row < m) && (column < n);
     }
 
-    /** Perform DFS on the grid
+    /** Perform BFS on the grid
      * @param {number} r   strarting row index
      * @param {number} c   starting column index
      * @return {number} Area of current block of (1)s (island)
      */
-    const DFS = function(r, c) {
+    const BFS = function(r, c) {
         let currIslandArea = 1;
+        const queue = [[r, c]]
         grid[r][c] = 0;
-        for (let [nr, nc] of directions) {
-            nr += r, nc += c;
-            if (isInBoundry(nr, nc) && grid[nr][nc] === 1) {
-                currIslandArea += DFS(nr, nc);
+
+        while (queue.length) {
+            const [row, column] = queue.shift();
+            for (let [nr, nc] of directions) {
+                nr += row, nc += column;
+                if (isInBoundry(nr, nc) && grid[nr][nc] === 1) {
+                    queue.push([nr, nc]);
+                    grid[nr][nc] = 0;
+                    currIslandArea++;
+                }
             }
         }
+        
         return currIslandArea;
     }
     
@@ -38,7 +46,7 @@ const maxAreaOfIsland = function(grid) { // Time : O(n * m) | Space : O(1)
     for (let r = 0; r < m; r++) {
         for (let c = 0; c < n; c++) {
             if (grid[r][c] === 1)
-                maxIslandArea = Math.max(DFS(r, c), maxIslandArea);
+                maxIslandArea = Math.max(BFS(r, c), maxIslandArea);
         }
     }
 
