@@ -3,22 +3,24 @@
  * @param {string} t
  * @return {number}
  */
-const minSteps = function(s, t) {
-    let minSteps = 0;
-    // creat a frqeuncy map for s
-    const sFreqMap = new Map();
-    for (const ch of s) {
-        sFreqMap.set(ch, (sFreqMap.get(ch) || 0) + 1);
-    }
-    // creat a frqeuncy map for t
-    const tFreqMap = new Map();
-    for (const ch of t) {
-        tFreqMap.set(ch, (tFreqMap.get(ch) || 0) + 1);
-    }
-    // calculate number of each char in s should exited in t
-    for (const [ch, times] of sFreqMap) {
-        minSteps += Math.max(0, times - (tFreqMap.get(ch) || 0))
-    }
+const minSteps = function(s, t) { // time : O(n * log(n)), space : O(n)
+    s_sorted = [...s].sort().join('');
+    t_sorted = [...t].sort().join('');
 
-    return minSteps;
+    let i = 0
+       ,j = 0
+       ,steps = s.length;
+
+    while (i < s.length) {
+        while (j < t.length && s_sorted[i] > t_sorted[j]){
+            j++
+        }
+        if (s_sorted[i] === t_sorted[j]) {
+            j++;
+            steps--;
+        }
+        i++;
+    }   
+
+    return steps;
 };
