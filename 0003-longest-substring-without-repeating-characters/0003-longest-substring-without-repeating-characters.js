@@ -8,11 +8,9 @@ const lengthOfLongestSubstring = function(s) { // Time : O(n), Space : O(1)
 
     for (let left = 0, right = 0; right < s.length; right++) {
         const currChar = s[right];
-        if (currExistedChars.has(currChar)) {
-            // Remove characters from the set until we remove the duplicate character
-            while (currExistedChars.has(currChar)) {
-                currExistedChars.delete(s[left++]);
-            }
+        // Remove characters from the set until we remove the duplicate character
+        while (currExistedChars.has(currChar)) {
+            currExistedChars.delete(s[left++]);
         }
         // Add the current character to the set
         currExistedChars.add(currChar);
