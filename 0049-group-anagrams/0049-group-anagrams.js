@@ -1,18 +1,16 @@
 /**
-* @param {string[]} strs
-* @return {string[][]}
-*/
-const groupAnagrams = function(strs) {
-    const anagramsGroup = new Map();
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+const groupAnagrams = function(strs) { // Time : O(n * m*log(m)) -> n : strs.length, m : strs' element length, Space : O(n)
+    const anagrams = {};
 
     for (const str of strs) {
         const key = [...str].sort().join('');
-
-        if (! anagramsGroup.has(key))
-            anagramsGroup.set(key, []);
-
-        anagramsGroup.get(key).push(str);
+        if (!anagrams.hasOwnProperty(key))
+            anagrams[key] = [];
+        anagrams[key].push(str);
     }
 
-    return [...anagramsGroup.values()];
+    return [...Object.values(anagrams)];
 };
