@@ -17,7 +17,7 @@ const equalSubstring = function(s, t, maxCost) { // Time : O(n), Space : O(n)
         // expand the window 
         currCost += charsDiffArr[r];
         // shrink the window when the currCost exeeded maxCost allowed
-        while (currCost > maxCost) {
+        if (currCost > maxCost) {
             currCost -= charsDiffArr[l++];
         }
         // update maxLen of subarray with cost less than or equal to maxCost so far
