@@ -2,14 +2,18 @@
  * @param {number[]} nums
  * @return {number}
  */
-const findMaxK = function(nums) { // time : O(n), space : O(n)
-    let maxPositiveIntger = -1;
-    const negatives = new Set(nums.filter(n => n < 0));
+const findMaxK = function(nums) { // time : O(n * log(n)), space : O(1)
+    nums.sort((a, b) => a - b);
+    let left = 0, right = nums.length - 1;
 
-    for (let i = 0; i < nums.length; i++) {
-        if (negatives.has(-1 * nums[i]))
-            maxPositiveIntger = Math.max(nums[i], maxPositiveIntger);
+    while(left < right) {
+        if (nums[left] + nums[right] === 0)
+            return nums[right];
+        else if (Math.abs(nums[left]) < nums[right])
+            right--;
+        else 
+            left++;
     }
 
-    return maxPositiveIntger;
+    return -1;
 };
