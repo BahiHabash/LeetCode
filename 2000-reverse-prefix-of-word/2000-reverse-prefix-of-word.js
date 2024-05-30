@@ -3,8 +3,14 @@
  * @param {character} ch
  * @return {string}
  */
-const reversePrefix = function(word, ch) {
-    const i = word.indexOf(ch);
-    
-    return  [...word.slice(0, i + 1)].reverse().join('') + word.slice(i + 1);
+const reversePrefix = function(word, ch) { // Time : O(n), Space : O(n)
+    let result = '';
+    let pivot = word.indexOf(ch);
+
+    for (let i = pivot; i >= 0; i--)
+        result += word[i];
+
+    result += word.slice(pivot + 1);    
+
+    return result;
 };
