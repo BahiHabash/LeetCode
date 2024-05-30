@@ -2,22 +2,17 @@
  * @param {number[]} nums
  * @return {number}
  */
-var findMaxK = function(nums) {
-    nums.sort((a, b) => a - b);
+const findMaxK = function(nums) { // time : O(n^2), space : O(1)
+    let maxPositiveIntger = -1;
 
-    let l = 0
-      , r = nums.length - 1;
-    
-    while (l < r) {
-        if (nums[l] * -1 > nums[r])
-            while (nums[l] * -1 > nums[r])
-                l++;
-
-        if (nums[l] * -1 === nums[r])
-            return nums[r];
-            
-        r--;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > 0) { 
+            for (let j = 0; j < nums.length; j++) {
+                if (nums[i] === -1 * nums[j])
+                    maxPositiveIntger = Math.max(nums[i], maxPositiveIntger); 
+            }
+        }
     }
 
-    return -1;
+    return maxPositiveIntger;
 };
