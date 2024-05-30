@@ -2,18 +2,16 @@
  * @param {number[]} nums
  * @return {number}
  */
-const findMaxK = function(nums) { // time : O(n * log(n)), space : O(1)
-    nums.sort((a, b) => a - b);
-    let left = 0, right = nums.length - 1;
+const findMaxK = function(nums) { // time : O(n), space : O(n)
+    let ans = -1;
+    const seen = new Set();
 
-    while(left < right) {
-        if (nums[left] + nums[right] === 0)
-            return nums[right];
-        else if (Math.abs(nums[left]) < nums[right])
-            right--;
+    for (const num of nums) {
+        if (Math.abs(num) > ans && seen.has(-num))
+            ans =Math.abs(num);
         else 
-            left++;
+            seen.add(num);
     }
 
-    return -1;
+    return ans;
 };
