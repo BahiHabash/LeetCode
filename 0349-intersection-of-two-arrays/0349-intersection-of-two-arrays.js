@@ -3,13 +3,19 @@
  * @param {number[]} nums2
  * @return {number[]}
  */
-const intersection = function(nums1, nums2) { // Time : O(n + m), Space : O(n + m)
-    const seen = new Set(nums1);
-    const intersection = new Set();
+const intersection = function(nums1, nums2) { // Time : O(n + m), Space : O(n)
+    const intersectionNums = [];
+    const seen = new Map();
 
-    for (const n of nums2)
-        if (seen.has(n) && !intersection.has(n))
-            intersection.add(n);
+    for (const n of nums1)
+        seen.set(n, 1);
+    
+    for (const n of nums2) {
+        if (seen.get(n) === 1) {
+            intersectionNums.push(n);
+            seen.delete(n);
+        }
+    }
             
-    return Array.from(intersection);
+    return intersectionNums;
 };
