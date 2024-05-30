@@ -4,16 +4,24 @@
  * @return {number}
  */
 const findMedianSortedArrays = function(nums1, nums2) { // Time : O(n), Space : O(1)
-    const arr = [];
-    for (let i = 0, j = 0; i < nums1.length || j < nums2.length;) {
-        if ((nums1[i] ?? Infinity) < (nums2[j] ?? Infinity))
-            arr.push(nums1[i++]);
-        else 
-            arr.push(nums2[j++]);
+    const totalLen = nums1.length + nums2.length;
+    let idx1 = 0, idx2 = 0;
+    let mid1 = 0, mid2 = 0;
+
+    for (let i = 0; i <= Math.floor(totalLen / 2); i++) {
+        if ((nums1[idx1] ?? Infinity) < (nums2[idx2] ?? Infinity)) {
+            mid2 = mid1;
+            mid1 = nums1[idx1++];
+        }
+        else  {
+            mid2 = mid1;
+            mid1 = nums2[idx2++];
+        }
     }
-    const len = arr.length;
-    if (len % 2 === 0)
-        return (arr[len / 2] + arr[(len / 2) - 1]) / 2;
+
+    if (totalLen % 2 === 1)
+        return mid1;
     else 
-        return arr[Math.floor(len / 2)];
+        return (mid1 + mid2) / 2;
+
 }   
