@@ -2,20 +2,15 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-const productExceptSelf = function(nums) {
-    const answer = [];
+const productExceptSelf = function(nums) { // Time : O(n), Space : O(1)
+    const productArr = new Array(nums.length).fill(0);
+    const zeros = nums.reduce((acc, n) => acc + (n === 0), 0);
+    const productWithoutZeros = nums.reduce((acc, n) => acc * (n === 0 ? 1 : n), 1);
 
-    let prefix = 1;
-    for (let i = 0; i < nums.length; i++) {
-        answer[i] = prefix;
-        prefix *= nums[i];
-    }
+    if (zeros === 0)
+        productArr.forEach((n, i, pArr) => pArr[i] = (productWithoutZeros / nums[i]));
+    else if (zeros === 1)
+        productArr.forEach((n, i, pArr) => pArr[i] = (nums[i] === 0 ? productWithoutZeros : 0));
 
-    let suffix = 1;
-    for (let i = nums.length - 1; i >= 0; i--) {
-        answer[i] *= suffix;
-        suffix *= nums[i];
-    }
-
-    return answer;
+    return productArr;
 };
