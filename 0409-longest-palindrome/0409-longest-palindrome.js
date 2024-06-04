@@ -2,17 +2,20 @@
  * @param {string} s
  * @return {number}
  */
-const longestPalindrome = function(s) {
-    const charFreq = {};
-    for (const char of s)
-        charFreq[char] = (charFreq[char] ?? 0) + 1;
+const longestPalindrome = function(s) { // Time : O(n), Space : O(1)
+    let numOfOdds = 0;
+    const charSet = new Set();
     
-    let nOdds = 0; // number of odd charFrequnces
-    let len = s.length; // the length of the longest palindrome that can be built with those letters
-    for (const char in charFreq) {
-        if (charFreq[char] % 2 === 1)
-            len--, nOdds++;
+    for (const char of s) {
+        if (charSet.has(char)) {
+            charSet.delete(char);
+            numOfOdds--;
+        }
+        else {
+            charSet.add(char);
+            numOfOdds++;            
+        }
     }
-
-    return len + Math.min(nOdds, 1);
+    
+    return s.length - numOfOdds + (numOfOdds > 0);
 };
