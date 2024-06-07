@@ -4,23 +4,15 @@
  * @return {string}
  */
 const replaceWords = function(dictionary, sentence) {
-    dictionary.sort((a, b) => a.length - b.length);
-    
-    const map = new Map();
-    for(const root of dictionary)
-        map.set(root[0], (map.get(root[0]) ?? '') + root + ',');
-
+    const roots = new Set(dictionary);
     const words = sentence.split(' ');
 
     for (const [i, word] of words.entries()) {
-        if (map.has(word[0])) {
-            const roots = map.get(word[0]).split(','); 
-            roots.pop(); // remove the empty root
-            for (const root of roots) {
-                if (word.startsWith(root)){
-                    words[i] = root;
-                    break;
-                }
+        for (let j = 0; j < word.length; j++) {
+            const currRoot = word.slice(0, j + 1);
+            if (roots.has(currRoot)) {
+                words[i] = currRoot;
+                break;
             }
         }
     }
