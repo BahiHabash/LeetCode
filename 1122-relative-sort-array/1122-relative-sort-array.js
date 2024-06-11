@@ -5,19 +5,21 @@
  */
 const relativeSortArray = function(arr1, arr2) { // time : O(n * log(n)), Space : O(n)
     const map1 = new Map(); // {n : freq}
-    for (const n of arr1)
-        map1.set(n, (map1.get(n) ?? 0) + 1); 
+    for (const n of arr1) {
+        if (! map1.has(n))
+            map1.set(n, []);
+        map1.get(n).push(n); 
+    }
     
     const map2 = new Map(); // {n : index}
     for (const [i, n] of arr2.entries())
-        map2.set(n, i)
+        map2.set(n, i);
 
     // add and sort Elements that do not appear in arr2 in ascending order.
     const numsNotInArr2 = [];
-    for (let [n, freq] of map1) {
+    for (let [n, nArr] of map1) {
         if (!map2.has(n)) {
-            while(freq--) 
-                numsNotInArr2.push(n);
+            numsNotInArr2.push(...nArr);
             map1.delete(n);
         }
     }
@@ -25,11 +27,9 @@ const relativeSortArray = function(arr1, arr2) { // time : O(n * log(n)), Space 
 
     // add and sort intersected elements in arr1
     arr1 = [];
-    for (let [n, freq] of map1) {
-        while(freq--) {
-            arr1.push(n);
+    for (let [n, nArr] of map1) {
+            arr1.push(...nArr);
             map1.delete(n);
-        }
     }
     arr1.sort((a, b) => map2.get(a) - map2.get(b));
 
