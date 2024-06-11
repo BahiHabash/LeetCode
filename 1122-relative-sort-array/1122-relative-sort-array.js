@@ -3,9 +3,9 @@
  * @param {number[]} arr2
  * @return {number[]}
  */
-// time : O(n + m), Space : O(1001) | n => size of arr1, m => size of arr2
+// time : O(n + m), Space : O(max number in arr1) | n => size of arr1, m => size of arr2
 const relativeSortArray = function(arr1, arr2) {
-    const freqArr = new Array(1001).fill(0); // {n : freq}
+    const freqArr = new Array(Math.max(...arr1) + 1).fill(0); // {n : freq}
 
     // fill frequency array for arr1 elements
     for (const n of arr1) 
