@@ -3,26 +3,35 @@
  * @param {number[]} arr2
  * @return {number[]}
  */
-// time : O(n * log(n)), Space : O(n + m) | n => size of arr1, m => size of arr2
+// time : O(m + n * log(n)), Space : O(n + m) | n => size of arr1, m => size of arr2
 const relativeSortArray = function(arr1, arr2) { 
-    const map2 = new Map(); // {n : index}
-    for (const [i, n] of arr2.entries())
-        map2.set(n, i);
+    const res = [];
+    const numsNotInArr2 = [];
+    const map = new Map(); // {n : freq}
 
-    // sort arr1's elements that exited in arr2 and move the element not intersected to the end
-    arr1.sort(function (a, b) {
-        return (map2.get(a) ?? (Infinity - a)) - (map2.get(b) ?? (Infinity - b));
-    });
-
-    // get the starting index of elements that doesn't exited in arr2
-    let i = arr1.length;
-    while (! map2.has(arr1[i - 1])) i--;
+    // fill frequency map for arr1 elements
+    for (const n of arr1) 
+        map.set(n, (map.get(n) ?? 0) + 1);
     
-    // get and sort all elements that doesn't exited in arr2
-    const numsNotInArr2 = arr1.splice(i).sort((a, b) => a - b);
+    // sort the intersected elements between arr1 & arr2 and store it in res
+    for (const n of arr2) {
+        let freq = map.get(n);
+        while (freq--)
+            res.push(n);
+        map.delete(n);
+    }
 
-    // append numsNotInArr2 to arr1
-    arr1.push(...numsNotInArr2);
+    // store the non-intersected elements in numsNotInArr2
+    for (let [n, freq] of map.entries()) {
+        while (freq--)
+            numsNotInArr2.push(n);
+    }
 
-    return arr1;
+    // sort the non-intersected elements
+    numsNotInArr2.sort((a, b) => a - b);
+
+    // append the numsNotInArr2 to the result array
+    res.push(...numsNotInArr2);
+
+    return res;
 };
