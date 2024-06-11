@@ -23,7 +23,7 @@ const replaceWords = function(dictionary, sentence) {
 class TrieNode {
     constructor() {
         this.isEnd = false;
-        this.children = new Array(26).fill(null);
+        this.children = new Map();
     }
 }
 
@@ -35,12 +35,9 @@ class Trie {
     insert(word) {
         let curr = this.root;
         for (const char of word) {
-            const idx = char.charCodeAt(0) - 97;
-
-            if (curr.children[idx] === null) 
-                curr.children[idx] = new TrieNode();
-
-            curr = curr.children[idx];
+            if (!curr.children.has(char))
+                curr.children.set(char, new TrieNode());
+            curr = curr.children.get(char);
         }
         curr.isEnd = true;
     }
@@ -48,16 +45,14 @@ class Trie {
     getRoot(word) {
         let curr = this.root;
         for (let i = 0; i < word.length; i++) {
-            const idx = word.charCodeAt(i) - 97;
-
-            if (curr.children[idx] === null)
+            const char = word[i];
+            if (!curr.children.has(char))
                 return word;
-
-            curr = curr.children[idx];
+            
+            curr = curr.children.get(char);
 
             if (curr.isEnd)
                 return word.slice(0, i + 1);
-                
         }
         return word;
     }
