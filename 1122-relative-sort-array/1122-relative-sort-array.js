@@ -3,37 +3,25 @@
  * @param {number[]} arr2
  * @return {number[]}
  */
-const relativeSortArray = function(arr1, arr2) { // time : O(n * log(n)), Space : O(n)
-    const map1 = new Map(); // {n : freq}
-    for (const n of arr1) {
-        if (! map1.has(n))
-            map1.set(n, []);
-        map1.get(n).push(n); 
-    }
-    
+// time : O(n * log(n)), Space : O(n + m) | n => size of arr1, m => size of arr2
+const relativeSortArray = function(arr1, arr2) { 
     const map2 = new Map(); // {n : index}
     for (const [i, n] of arr2.entries())
         map2.set(n, i);
 
-    // add and sort Elements that do not appear in arr2 in ascending order.
-    const numsNotInArr2 = [];
-    for (let [n, nArr] of map1) {
-        if (!map2.has(n)) {
-            numsNotInArr2.push(...nArr);
-            map1.delete(n);
-        }
-    }
-    numsNotInArr2.sort((a, b) => a - b);
+    // sort arr1's elements that exited in arr2 and move the element not intersected to the end
+    arr1.sort(function (a, b) {
+        return (map2.get(a) ?? (Infinity - a)) - (map2.get(b) ?? (Infinity - b));
+    });
 
-    // add and sort intersected elements in arr1
-    arr1 = [];
-    for (let [n, nArr] of map1) {
-            arr1.push(...nArr);
-            map1.delete(n);
-    }
-    arr1.sort((a, b) => map2.get(a) - map2.get(b));
+    // get the starting index of elements that doesn't exited in arr2
+    let i = arr1.length;
+    while (! map2.has(arr1[i - 1])) i--;
+    
+    // get and sort all elements that doesn't exited in arr2
+    const numsNotInArr2 = arr1.splice(i).sort((a, b) => a - b);
 
-    // merget two sorted arrayes
+    // append numsNotInArr2 to arr1
     arr1.push(...numsNotInArr2);
 
     return arr1;
