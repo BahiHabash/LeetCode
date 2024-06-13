@@ -1,25 +1,25 @@
 /**
  * @param {string[]} strs
- * @return {string}
+ * @return {string} longest prefix string or empty string if no existed
  */
-var longestCommonPrefix = function(strs) { // O(n * m) time | O(1) space
-    let prefix = strs[0] || '';
-    
-    for (const str of strs)
-        prefix = getPrefix(prefix, str);
+const longestCommonPrefix = function(strs) { // time : O(n * m), Space : O(1) | n => num of strs, m length of smallest string
+    const prefixSample = strs.reduce((acc, str) => acc < str.length ? str : acc, 0);
+    const maxCommonPprefix = '';
 
-    return prefix;
+    for (let i = prefixSample.length; i >= 0; i--) {
+        const currPrefix = prefixSample.slice(0, i);
+        let isPrefixCommon = true;
+
+        for (const str of strs) {
+            if (!str.startsWith(currPrefix)) {
+                isPrefixCommon = false;
+                break;
+            }
+        }
+
+        if (isPrefixCommon)
+            return currPrefix;
+    }
+
+    return '';
 };
-
-
-/**
- * @param {string[], sring[]} strs
- * @return {string}
- */
-const getPrefix = function(str1, str2) {
-    let i = 0;
-    while ((i < str1.length) && (str1[i] === str2[i]))
-        i++;
-        
-    return str1.slice(0, i);
-}
