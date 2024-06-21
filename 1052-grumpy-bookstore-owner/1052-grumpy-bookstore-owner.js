@@ -4,33 +4,31 @@
  * @param {number} minutes
  * @return {number}
  */
-const maxSatisfied = function(customers, grumpy, minutes) { // Time : O(n), Space : O(n)
+const maxSatisfied = function(customers, grumpy, minutes) { // Time : O(n), Space : O(1)
+    // get already satisfied customers 
     let maxSatisfiedCustomers = 0;
-    const notSatisfiedCustomers = [];
 
     for (const [i, numOfCurrCustomers] of customers.entries()) {
-        if (grumpy[i] === 0)
-            maxSatisfiedCustomers += numOfCurrCustomers;
-        else 
-            notSatisfiedCustomers.push([numOfCurrCustomers, i]);
+        maxSatisfiedCustomers += numOfCurrCustomers * (grumpy[i] === 0);
     }
 
-    let left = 0
-      , right = 0
-      , currConvertedCustomers = 0
-      , maxConvertedCustomers = 0;
+    // get max number of customer can be convert to be satisfied by the secret technique
+    let currConvertedCustomers = 0
 
-    while (right < notSatisfiedCustomers.length) {
-        currConvertedCustomers += notSatisfiedCustomers[right][0];
+    for (let i = 0; i < minutes; i++) {
+        currConvertedCustomers += customers[i] * (grumpy[i] === 1);
+    }
 
-        while (minutes < (notSatisfiedCustomers[right][1] - notSatisfiedCustomers[left][1] + 1)) {
-            currConvertedCustomers -= notSatisfiedCustomers[left][0];
-            left++;
-        }
+    let maxConvertedCustomers = currConvertedCustomers;
+
+    for (let i = minutes; i < customers.length; i++) {
+        currConvertedCustomers += customers[i] * (grumpy[i] === 1);
+        currConvertedCustomers -= (customers[i  - minutes] * (grumpy[i - minutes] === 1)) ?? 0;
 
         maxConvertedCustomers = Math.max(currConvertedCustomers, maxConvertedCustomers);
-        right++; 
     }
 
-    return maxSatisfiedCustomers + maxConvertedCustomers;
+    maxSatisfiedCustomers += maxConvertedCustomers;
+
+    return maxSatisfiedCustomers;
 };
