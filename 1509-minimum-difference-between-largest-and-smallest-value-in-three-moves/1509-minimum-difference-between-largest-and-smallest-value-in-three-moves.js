@@ -7,7 +7,7 @@ const minDifference = function(nums) {
     
     nums.sort((a, b) => a - b);
 
-    // all four passable scenarios 
+    // all four possible  scenarios 
     return Math.min(
                     nums.at(-1) - nums.at(3),
                     nums.at(-2) - nums.at(2),
