@@ -9,48 +9,46 @@
  * @param {ListNode} head
  * @return {number[]}
  */
-function nodesBetweenCriticalPoints(head) { // Time : O(n), Space : O(n)
-    const citicalPointsPosition = getCriticalPointPositions(head);
-    
-    if (citicalPointsPosition.length >= 2) {
-         let minDistance = Infinity
-          , maxDistance = citicalPointsPosition.at(-1) - citicalPointsPosition.at(0);
-
-        for (let i = 1; i < citicalPointsPosition.length; i++) {
-            minDistance = Math.min(citicalPointsPosition[i] - citicalPointsPosition[i - 1], minDistance);
-        }  
-        
-        return [minDistance, maxDistance];      
-    }
-    
-    return [-1, -1];
-
-};
-
-function getCriticalPointPositions(head) {
-    const citicalPointsPosition = [];
+function nodesBetweenCriticalPoints(head) { // Time : O(n), Space : O(1) 
     let prev = null
       , curr = head
       , next = head.next
-      , position = 0;
+
+      , position = 0
+      , criticalPositionsNum = 0
+      , prevCriticalPointPosition
+      , firstCriticalPointPosition
+
+      , maxDistance = -1
+      , minDistance = Infinity;
     
     while (curr) {
         position++;
 
         if (isCriticalPoint(prev, curr, next)) {
-            citicalPointsPosition.push(position);
-        }
+            criticalPositionsNum++;
 
+            if (criticalPositionsNum >= 2) {
+                minDistance = Math.min(position - prevCriticalPointPosition, minDistance);
+            } else {
+                firstCriticalPointPosition = position;
+            }
+
+            prevCriticalPointPosition = position;
+        }
+    
         prev = curr;
         curr = curr.next;
         next = curr?.next;
     }
 
+    maxDistance = prevCriticalPointPosition - firstCriticalPointPosition;
 
-    return citicalPointsPosition;
-}
+
+    return criticalPositionsNum >= 2 ? [minDistance, maxDistance] : [-1, -1];
+};
 
 function isCriticalPoint(prev, curr, next) {
     return prev && curr && next &&
         ((prev.val > curr.val && curr.val < next.val) || (prev.val < curr.val && curr.val > next.val))
-}
+};
