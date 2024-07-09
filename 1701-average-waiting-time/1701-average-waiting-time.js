@@ -3,21 +3,15 @@
  * @return {number}
  */
 const averageWaitingTime = function(customers) { // Time : O(n), Space : O(1)
-    const customersNum = customers.length;
-    let [currTime, totalWaitingTime] = customers[0];
-    currTime += totalWaitingTime;
+    let currTime = 0
+      , totalWaitingTime = 0;
     
-    for (let i = 1; i < customersNum; i++) {
-        const [arrival, time] = customers[i];
-
-        if (currTime <= arrival) {
-            totalWaitingTime += time;
-        } else {
-            totalWaitingTime += currTime + time - arrival;
-        }
-
+    for (const [arrival, time] of customers) {
+        // update total waiting time until now
+        totalWaitingTime += (currTime >= arrival) ? (currTime + time - arrival) : (time);
+        // update current time after finishing the current order
         currTime = Math.max(arrival, currTime) + time;
     }
 
-    return totalWaitingTime / customersNum;
+    return totalWaitingTime / customers.length;
 };
