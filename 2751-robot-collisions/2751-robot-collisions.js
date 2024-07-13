@@ -8,49 +8,54 @@ const survivedRobotsHealths = function(positions, healths, directions) {
     const map = {};
     for (const [i, position] of positions.entries()) {
         map[position] = {
-                index : i,
-                dir :directions[i],
-                health : healths[i],
-            };
+            index: i,
+            dir: directions[i],
+            health: healths[i],
+        };
     }
 
-    // sort robot  acs
+    // free data when lifeCycle is finish
+    healths = directions = null;
+
+    // Sort positions in ascending order
     positions.sort((a, b) => a - b);
 
-    // use stack to get survival robots from collisions
-    // only when L is faced with R
+    // Use stack to determine which robots survive collisions
     const stack = [];
 
     for (const currRobotPosition of positions) {
-        let {health : currRobotHealth, dir : currRobotDir} = map[currRobotPosition];
+        const currRobot = map[currRobotPosition];
 
-        while (map[stack.at(-1)]?.dir === 'R' && currRobotDir === 'L' && currRobotHealth) {
-            const {health : topRobotHealth} = map[stack.at(-1)];
+        while (map[stack.at(-1)]?.dir === 'R' && currRobot.dir === 'L' && currRobot.health) {
+            const topRobotPosition = stack.at(-1);
+            const topRobot = map[topRobotPosition];
 
-            if (topRobotHealth === currRobotHealth) {
-                currRobotHealth = 0;
+            if (topRobot.health === currRobot.health) {
                 delete map[stack.pop()];
                 delete map[currRobotPosition];
-            } else if (currRobotHealth - topRobotHealth >= 1) {
-                currRobotHealth -= 1;
+                break;  // Both robots destroy each other
+            } else if (currRobot.health > topRobot.health) {
+                currRobot.health -= 1;
                 delete map[stack.pop()];
             } else {
-                currRobotHealth = 0;
+                topRobot.health -= 1;
                 delete map[currRobotPosition];
-                map[stack.at(-1)].health -= 1;
+                break;  // Current robot is destroyed
             }
-        } 
-        
-        if (currRobotHealth) {
+        }
+
+        // Push current robot position to the stack if it survives
+        if (map[currRobotPosition]) {
             stack.push(currRobotPosition);
-            map[currRobotPosition].health = currRobotHealth;
-        } else if (map[currRobotPosition]) {
-            delete map[currRobotPosition];
         }
     }
 
-    // resort survival robots as the order in the original positions
-    stack.sort((a, b) => map[a].index - map[b].index);
-    
-    return stack.map((currRobotPosition) => map[currRobotPosition].health);
+    // free data when lifeCycle is finish
+    positions = null;
+
+    // Sort surviving robots by their original positions' indices
+    stack.sort((a, b) => map[a]?.index - map[b]?.index);
+
+    // Return the healths of the surviving robots
+    return stack.map((currRobotPosition) => map[currRobotPosition]?.health);
 };
