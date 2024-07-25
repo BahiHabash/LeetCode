@@ -2,43 +2,25 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-const sortArray = function(nums) {
-    return sort(nums);
-};
+const sortArray = function(nums) { // Count sort, Time : O(n), Space : O(maxNum - minNum + 1)
+    // get min and max number in nums
+    let [min, max] = [nums[0], nums[0]];
+    nums.forEach(num => {
+        min = Math.min(num, min);
+        max = Math.max(num, max);
+    });
 
-// MergeSort
-const sort = function(arr = []) {
-    const len = arr.length;
+    // creat an array with to perform count sort
+    const sortedNums = new Array(max - min + 1).fill(0);
+    nums.forEach(num => sortedNums[num - min]++);
 
-    if (len <= 1) return arr; // Base Case
+    // sort the nums array
+    let j = 0;    // index to keep track sortedNums array
+    for (let i = 0; i < nums.length; i++) {
+        nums[i] = j + min;
+        sortedNums[j] -= 1;
+        while (sortedNums[j] === 0) j++; // skip no longer non-exited numbers
+    };
 
-    const mid = Math.floor(len / 2);
-    const leftArr = arr.slice(0, mid);
-    const rightArr = arr.slice(mid);
-
-    sort(leftArr);
-    sort(rightArr);
-
-    return merge(leftArr, rightArr, arr);
-};
-
-const merge = function(leftArr, rightArr, arr) {
-    let [i, l, r] = [0, 0, 0];
-    // merge sort leftArr and rightArr into arr
-    while (l < leftArr.length && r < rightArr.length) {
-        if (leftArr[l] < rightArr[r]) 
-            arr[i++] = leftArr[l++];
-        else 
-            arr[i++] = rightArr[r++];
-    }
-    // put the remaing nums of leftArr into arr
-    while (l < leftArr.length) {
-        arr[i++] = leftArr[l++];
-    }
-    // put the remaing nums of rightArr into arr
-    while (r < rightArr.length) {   
-        arr[i++] = rightArr[r++];
-    }
-
-    return arr;
+    return nums;
 };
