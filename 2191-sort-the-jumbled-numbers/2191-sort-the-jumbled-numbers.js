@@ -4,18 +4,21 @@
  * @return {number[]}
  */
 function sortJumbled(mapping, nums) {
-    const dicimalSys = new Map();
+    const decimalValues = {};
 
-    nums.forEach( num => dicimalSys.set(num, converToDecimal(mapping, num)) );
+    function getDecimalValue(num) {
+        if (decimalValues[num]) return decimalValues[num];
 
-    return nums.sort((a, b) => dicimalSys.get(a) - dicimalSys.get(b));
+        let decimalValue = '';
+
+        for (const digit of String(num))
+            decimalValue += mapping[digit];
+
+        decimalValues[num] = (decimalValue -= 0);
+
+        return decimalValue;
+    };
+
+    return nums.sort((a, b) => getDecimalValue(a) - getDecimalValue(b));
 };
 
-function converToDecimal(mapping, num) {
-    let result = '';
-
-    for (const digit of String(num))
-        result += mapping[digit];
-
-    return +result;
-};
