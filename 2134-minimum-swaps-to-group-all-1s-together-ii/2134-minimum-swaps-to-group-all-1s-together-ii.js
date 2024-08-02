@@ -2,26 +2,20 @@
  * @param {number[]} nums
  * @return {number}
  */
-const minSwaps = function(nums) {
-    let minSwapss = Infinity;
-    let onesInCurrWindow = 0;
-    let total = nums.reduce((acc, num) => acc + (num === 1), 0);
+const minSwaps = function(nums) { // Time : O(n), Space : O(1)
+    const len = nums.length;
+    const windowSize = nums.reduce((acc, num) => acc + (num === 1), 0); // window size is the number of ones in the nums array
+    let zerosInCurrWindow = 0;
+    let minSwapsToGroupOnes = windowSize;
 
-    for (let i = 0; i < total; i++) {
-        onesInCurrWindow += (nums[i] === 1);
+    for (let i = 0; i < len + windowSize; i++) {
+        zerosInCurrWindow += (nums.at(i % len) === 0); // expand the window
+        
+        if (i >= windowSize) {
+            zerosInCurrWindow -= (nums.at(i - windowSize) === 0); // shrink the window
+            minSwapsToGroupOnes = Math.min(zerosInCurrWindow, minSwapsToGroupOnes);
+        }
     }
 
-    for (let i = total; i < nums.length; i++) {
-        onesInCurrWindow += (nums[i] === 1);
-        onesInCurrWindow -= (nums[i - total] === 1);
-        minSwapss = Math.min(total - onesInCurrWindow, minSwapss)
-    }
-
-    for (let i = 0; i < total; i++) {
-        onesInCurrWindow += (nums[i] === 1);
-        onesInCurrWindow -= (nums[nums.length - total + i] === 1);
-        minSwapss = Math.min(total - onesInCurrWindow, minSwapss)
-    }
-
-    return minSwapss;
+    return minSwapsToGroupOnes;
 }
