@@ -11,9 +11,12 @@ const kthDistinct = function(arr, k) {
         charFreq[str]++;
     }
 
-    const kthDistinctString = Object.entries(charFreq)
-    .filter(([char, freq]) => freq === 1)
-    .at(k - 1)?.at(0);
-    
-    return kthDistinctString ?? '';
+    let n = 0;
+
+    for (const str of arr) {
+        if (charFreq[str] === 1) n++;
+        if (n === k) return str;
+    }
+
+    return '';
 };
