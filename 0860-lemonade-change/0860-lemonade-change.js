@@ -7,20 +7,18 @@ const lemonadeChange = function(bills) {
 
     for (const bill of bills) {
         myChange[bill]++;
-        
-        if (bill === 10) {
-            if (!myChange[5]) return false;
+
+        if (bill !== 5) {
+            if (myChange[5] === 0) return false;
+            
             myChange[5]--;
-        } else if (bill === 20) {
-            if (myChange[5] && myChange[10]) {
-                myChange[5]--;
-                myChange[10]--;
-            } else if (myChange[5] >= 3) {
-                myChange[5] -= 3;
-            } else { 
-                return false;
+            
+            if (bill === 20) {
+                if (myChange[10]) myChange[10]--;
+                else if (myChange[5] >= 2) myChange[5] -= 2;
+                else return false;
             }
-        }
+        } 
     }
 
     return true;
