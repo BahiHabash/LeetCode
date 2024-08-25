@@ -8,22 +8,14 @@
  */
 /**
  * @param {TreeNode} root
- * @return {number[]} postorder traversal Array
+ * @return {number[]}
  */
-const postorderTraversal = function(root) {
-    const postOrderArr = [];
-    postOrder(root, postOrderArr)
-    return postOrderArr;
-};
-
-/**
- * @param {TreeNode} root root of the tree
- * @param {number[]} arr array of post order values
- */
-const postOrder = function(root, arr) {
+const postorderTraversal = function(root, postOrder = []) {
     if (root) {
-        postOrder(root.left, arr);
-        postOrder(root.right, arr);
-        arr.push(root.val);
+        postorderTraversal(root.left, postOrder);
+        postorderTraversal(root.right, postOrder);
+        postOrder.push(root.val);
     }
-}
+
+    return postOrder;
+};
