@@ -11,26 +11,25 @@ const countSubIslands = function(grid1, grid2) {
         return row >= 0 && col >= 0 && row < m && col < n;
     };
 
-    const dfs = function(row, col) {
-        if (!withinBoundaries(row, col) || grid2[row][col] === 0) {
-            return true;
+    const dfs = function(grid, row, col) {
+        if (grid[row][col] !== 1) {
+            return true; // If it's not land, it doesn't affect sub-island status.
         }
 
-        // If this part of grid2 is land but grid1 is water, it's not a sub-island.
-        if (grid1[row][col] === 0) {
-            return false;
-        }
+        // Mark as visited
+        grid[row][col] = '#';
 
-        // Mark the cell as visited
-        grid2[row][col] = 0;
+        // Check if this part of grid2 is also a valid part of grid1
+        let isSubIsland = grid1[row][col] === 1;
 
-        let isSubIsland = true;
+        // Explore all 4 directions
+        for (const [dx, dy] of directions) {
+            const newRow = row + dx;
+            const newCol = col + dy;
 
-        for (const [i, j] of directions) {
-            const [newRow, newCol] = [row + i, col + j];
             if (withinBoundaries(newRow, newCol)) {
-                // If any DFS call returns false, this is not a sub-island
-                if (!dfs(newRow, newCol)) {
+                // If dfs returns false for any neighbor, then it's not a sub-island
+                if (!dfs(grid, newRow, newCol)) {
                     isSubIsland = false;
                 }
             }
@@ -38,13 +37,13 @@ const countSubIslands = function(grid1, grid2) {
 
         return isSubIsland;
     };
-
+    
     let numOfSubIslands = 0;
 
     for (let i = 0; i < m; i++) {
         for (let j = 0; j < n; j++) {
             if (grid2[i][j] === 1) {
-                numOfSubIslands +=dfs(i, j);
+                numOfSubIslands += dfs(grid2, i, j);
             }
         }
     }
