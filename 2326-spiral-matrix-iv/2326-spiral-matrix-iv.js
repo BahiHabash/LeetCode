@@ -13,7 +13,8 @@
  */
 const spiralMatrix = function(m, n, head) { // Time : O(m * n)
     const DEFAULT_VALUE = -1;
-    const mat = new Array(m).fill(null).map(() => new Array(n).fill(DEFAULT_VALUE));
+    const mat = Array.from({ length: m }, () => new Array(n).fill(DEFAULT_VALUE));
+;
     
     let currNode = head;
     let [row, col] = [0, 0];
@@ -24,7 +25,6 @@ const spiralMatrix = function(m, n, head) { // Time : O(m * n)
             mat[row][col++] = currNode.val;
             currNode = currNode.next;
         }
-        
         row++, col--;
 
         // down 
@@ -32,7 +32,6 @@ const spiralMatrix = function(m, n, head) { // Time : O(m * n)
             mat[row++][col] = currNode.val;
             currNode = currNode.next;
         }
-
         row--, col--;
 
         // left
@@ -40,7 +39,6 @@ const spiralMatrix = function(m, n, head) { // Time : O(m * n)
             mat[row][col--] = currNode.val;
             currNode = currNode.next;
         }
-
         row--, col++;
 
         // up 
@@ -48,7 +46,6 @@ const spiralMatrix = function(m, n, head) { // Time : O(m * n)
             mat[row--][col] = currNode.val;
             currNode = currNode.next;
         }
-
         row++, col++;
     }
 
