@@ -4,17 +4,9 @@
  * @return {number[]}
  */
 const xorQueries = function(arr, queries) {
-    const ans = [];
-
-    for (const [left, right] of queries) {
-        let xorRes = arr[left];
-
-        for (let i = left + 1; i <= right; i++) {
-            xorRes ^= arr[i];
-        }
-
-        ans.push(xorRes);
-    }
-
-    return ans;
+    return queries.map(([left, right]) => {
+        let queryResult = 0;
+        while (left <= right) queryResult ^= arr[left++];
+        return queryResult;
+    });
 };
