@@ -1,6 +1,14 @@
+class ListNode {
+    constructor(start = null, end = null, next = undefined) {
+        this.start = start;
+        this.end = end;
+        this.next = next;
+    }
+}
+
 class MyCalendar {
     constructor() {
-        this.events = [];
+        this.events = new ListNode();  // dummy head events
     }
 
     /** 
@@ -9,21 +17,18 @@ class MyCalendar {
      * @return {boolean}
      */
     book(start, end) {
-        if (!this.events.length) {
-            this.events.unshift([start, end]);
-            return true;
+        let prevEvent = this.events;
+        let currEvent = this.events.next;
+
+        while (currEvent) {
+            if (start < currEvent.end) break; // there is conflict
+            prevEvent = currEvent;
+            currEvent = currEvent.next;
         }
 
-        let i = 0;
-        while (i < this.events.length && start >= this.events[i][1]) {
-            i++;
-        }
+        if (currEvent && end > currEvent.start) return false; // there is overlapping 
 
-        if (i < this.events.length && end > this.events[i][0]) {
-            return false; // The new event overlaps with an existing event.
-        }
-
-        this.events.splice(i, 0, [start, end]); // Insert new event.
+        prevEvent.next = new ListNode(start, end, currEvent); // Insert new event.
         return true;
     }
 }
