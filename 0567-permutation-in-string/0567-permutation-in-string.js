@@ -4,36 +4,40 @@
  * @return {boolean}
  */
 const checkInclusion = function(s1, s2) {
-    const s1Map = new Map();
+    const map1 = {};
     for (const char of s1) {
-        s1Map.set(char, (s1Map.get(char) ?? 0) + 1);
+        map1[char] = (map1[char] ?? 0) + 1;
     }
     
-    let window = '';
-    const windowMap = new Map();
-    for (const char of s2) {
-        window += char;
-        windowMap.set(char, (windowMap.get(char) ?? 0) + 1);
+    let currLen = 0;
+    const map2 = {};
 
-        if (window.length < s1.length) continue;
+    for (let i = 0; i < s2.length; i++) {
+        const char = s2[i];
+        currLen++;
+        map2[char] = (map2[char] ?? 0) + 1;
 
-        if ( isEqualMaps(windowMap, s1Map) ) return true;
+        if (currLen < s1.length) continue;
 
-        const frontChar = window[0];
+        if (isEqualMaps(map2, map1)) return true;
 
-        windowMap.set(frontChar, windowMap.get(frontChar) - 1);
-        if (windowMap.get(frontChar) === 0) windowMap.delete(frontChar);
+        const frontChar = s2[i - currLen + 1];
 
-        window = window.slice(1);
+        map2[frontChar]--;
+        if (map2[frontChar] === 0) delete map2[frontChar];
+        
+        currLen--;
     }
 
     return false;
 };
 
 const isEqualMaps = function(map1, map2) {
-    if (map1.size !== map2.size) return false;
-    return [...map1.entries()]
-            .every(([char, freq]) => 
-                freq === map2.get(char)
-            );
+    if (Object.keys(map1).length !== Object.keys(map2).length) return false;
+
+    for (const [char, freq] of Object.entries(map1)) {
+        if (map2[char] !== freq) return false;
+    }
+
+    return true;
 };
