@@ -4,40 +4,35 @@
  * @return {boolean}
  */
 const checkInclusion = function(s1, s2) {
-    const map1 = {};
+    const freqArr1 = new Array(26).fill(0);
     for (const char of s1) {
-        map1[char] = (map1[char] ?? 0) + 1;
+        const charIdx = char.charCodeAt(0) - 'a'.charCodeAt(0);
+        freqArr1[charIdx]++;
     }
     
     let currLen = 0;
-    const map2 = {};
+    const freqArr2 = new Array(26).fill(0);
 
     for (let i = 0; i < s2.length; i++) {
-        const char = s2[i];
+        const charIdx = s2[i].charCodeAt(0) - 'a'.charCodeAt(0);
+
         currLen++;
-        map2[char] = (map2[char] ?? 0) + 1;
+        freqArr2[charIdx]++;
 
         if (currLen < s1.length) continue;
 
-        if (isEqualMaps(map2, map1)) return true;
+        if ( isContainsPermutation(freqArr1, freqArr2) ) return true;
 
-        const frontChar = s2[i - currLen + 1];
-
-        map2[frontChar]--;
-        if (map2[frontChar] === 0) delete map2[frontChar];
-        
+        const frontCharIdx = s2[i - currLen + 1].charCodeAt(0) - 'a'.charCodeAt(0);
+        freqArr2[frontCharIdx]--;
         currLen--;
     }
 
     return false;
 };
 
-const isEqualMaps = function(map1, map2) {
-    if (Object.keys(map1).length !== Object.keys(map2).length) return false;
-
-    for (const [char, freq] of Object.entries(map1)) {
-        if (map2[char] !== freq) return false;
-    }
-
-    return true;
+const isContainsPermutation = function(freqArr1, freqArr2) {
+    return freqArr1.every((charFreq, i) => 
+        freqArr2[i] === charFreq
+    );
 };
