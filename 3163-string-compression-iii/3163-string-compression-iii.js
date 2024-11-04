@@ -3,24 +3,25 @@
  * @return {string}
  */
 const compressedString = function(word) {
+    if (!word) return '';
+    
+    const len = word.length;
     let comp = '';
-    let prefix = '';
+    let [prefixChar, prefixLength] = [word[0], 1];
 
-    for (const char of word) {
-        if (
-            prefix.length &&
-           ( prefix.length === 9 || char !== prefix.at(-1) )
-        ) {
-            comp += `${prefix.length}${prefix[0]}`;
-            prefix = '';
+    for (let i = 1; i < len; i++) {
+        // check if we get maximum length prefix of word made of a single character c repeating at most 9 times
+        if (word[i] !== prefixChar || prefixLength === 9) {
+            comp += `${prefixLength}${prefixChar}`;
+            [prefixChar, prefixLength] = ['', 0];
         }
 
-        prefix += char;
+        prefixChar = word[i];
+        prefixLength++;
     }
-
-    if (prefix.length) {
-        comp += `${prefix.length}${prefix[0]}`;
-        prefix = null;
+    // append the remaing prefix if exited
+    if (prefixLength) {
+        comp += `${prefixLength}${prefixChar}`;
     }
 
     return comp;
