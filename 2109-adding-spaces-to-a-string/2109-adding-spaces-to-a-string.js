@@ -4,13 +4,13 @@
  * @return {string}
  */
 const addSpaces = function(s, spaces) {
-    const spacesIdx = new Set(spaces);
-
+    let spaceIdx = 0;
     let res = '';
 
     for (let i = 0; i < s.length; i++) {
-        if (spacesIdx.has(i)) {
+        if (spaces[spaceIdx] === i) {
             res += ' ';
+            spaceIdx++;
         }
         
         res += s[i];
