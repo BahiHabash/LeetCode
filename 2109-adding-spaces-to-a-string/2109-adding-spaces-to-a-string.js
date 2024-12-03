@@ -4,17 +4,15 @@
  * @return {string}
  */
 const addSpaces = function(s, spaces) {
-    let spaceIdx = 0;
     let res = '';
+    let sIdx = 0;
 
-    for (let i = 0; i < s.length; i++) {
-        if (spaces[spaceIdx] === i) {
-            res += ' ';
-            spaceIdx++;
-        }
-        
-        res += s[i];
+    for (const i of spaces) {
+        res += s.slice(sIdx, i) + ' ';
+        sIdx = i;
     }
+
+    res += s.slice(sIdx);
 
     return res;
 };
