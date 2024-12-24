@@ -11,30 +11,26 @@
  * @return {ListNode}
  */
 const removeNthFromEnd = function(head, n) {
-    const dummy = new ListNode(0, head);
+    const dummy = new ListNode(null, head);
+    const len = getLength(head);
     let prev = dummy;
-    let slow = head;
-    let fast = head;
 
-    for (let i = 1; i <= n; i++)
-        fast = fast.next;
-
-    while (fast) {
-        fast = fast.next;
-        prev = slow;
-        slow = slow.next;
+    for (let i = 1; i <= (len - n); i++) {
+        prev = prev.next;
     }
 
-    deleteNode(prev, slow);
+    prev.next = prev?.next?.next;
 
-    return dummy.next;    
+    return dummy.next;
 };
 
-/**
-* @param {ListNode} prev
-* @param {ListNode} curr
- */
-const deleteNode = function(prev, curr) {
-    prev.next = curr.next;
-    delete curr;
-};
+const getLength = function(node) {
+    let len = 0;
+
+    while (node) {
+        len++;
+        node = node.next;
+    }
+
+    return len;
+}
