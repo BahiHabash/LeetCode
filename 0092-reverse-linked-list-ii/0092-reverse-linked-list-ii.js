@@ -11,42 +11,40 @@
  * @param {number} right
  * @return {ListNode}
  */
-const reverseBetween = function(head, l, r) {
-    const valuesArr = arrayFromLLinkedist(head);
-    reverseArrayBetween(valuesArr, l - 1, r - 1);
-    return linkedListFromArray(valuesArr);
-};
-
-const arrayFromLLinkedist = function(head) {
-    const arr = [];
-
-    while(head) {
-        arr.push(head.val);
-        head = head.next;
+const reverseBetween = function(head, left, right) {
+    const values = getValuesBetween(head, left, right);
+    let [node, i] = [head, 1];
+    
+    while (i < left) {
+        node = node.next;
+        i++;
     }
 
-    return arr;
-};
-
-const linkedListFromArray = function(arr) {
-    if (!arr.length) return null;
-
-    let head = new ListNode(arr[0]);
-    let current = head;
-
-    for (let i = 1; i < arr.length; i++) {
-        current.next = new ListNode(arr[i]);
-        current = current.next;
+    while (i <= right) {
+        node.val = values.pop();
+        node = node.next;
+        i++;
     }
 
     return head;
-}
-
-
-const reverseArrayBetween = function(arr, l, r) {
-    while (l < r) {
-        [arr[l], arr[r]] = [arr[r], arr[l]];
-        l++, r--;
-    }
 };
+
+const getValuesBetween = function(head, left, right) {
+    const values = [];
+    let i = 1;
+    
+    while (i < left) {
+        head = head.next;
+        i++;
+    }
+
+    while (i <= right) {
+        values.push(head.val);
+        head = head.next;
+        i++;
+    }
+
+    return values;
+};
+
 
