@@ -11,32 +11,36 @@
  * @return {ListNode}
  */
 const rotateRight = function(head, k) {
-    if (!head?.next) return head;
-
-    let len = 0; 
-    let [prev, curr] = [null, head];
-
-    while (curr) {
-        prev = curr;
-        curr = curr.next;
-        len++;
-    }
-
-    const lastNode = prev;
-    let newHead = head;
-    k %= len;
+    const len = getLength(head);
+    k %= len;  // romove unnecessary rotaions cycles
 
     if (!k) return head;
 
-    for (let i = 1; i < (len - k); i++) {
-        newHead = newHead.next;
-    }
+    const lastNode = getNthNode(head, len);
+    const newTail = getNthNode(head, len - k);
+    const newHead = newTail.next;
 
-    const newLastNode = newHead;
-    newHead = newHead?.next;
-    newLastNode.next = null;
-
-    lastNode.next = head;
+    newTail.next = null;   // cut the tail
+    lastNode.next = head;  // link the tail with head
 
     return newHead;
 };
+
+const getLength = function(head) {
+    let len = 0;
+
+    while (head) {
+        head = head.next;
+        len++;
+    }
+
+    return len;
+};
+
+const getNthNode = function(head, n) {
+    for (let i = 1; i < n; i++) {
+        head = head.next;
+    }
+
+    return head;
+}
