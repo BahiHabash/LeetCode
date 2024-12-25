@@ -10,31 +10,21 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-const largestValues = function(root) { // Time : O(n), Space : O(w) -> w : max num of nodes in any row
-    if (!root) return []; // filter out null trees
+const largestValues = function(root) { // Time : O(n), Space : O(h) -> h : height of the tree
+    const maxValPerLevel = [];
 
-    const queue = [root];
-    const largestValuePerRow = [];
+    DFS(root, maxValPerLevel);
 
-    while (queue.length) {
-        let currMax = -Infinity;
-        let size = queue.length;
+    return maxValPerLevel;
+};
 
-        while (size--) {
-            const removedNode = queue.shift();
-            currMax = Math.max(removedNode.val, currMax);
-            
-            // add children to the queue if existed
-            if (removedNode.left) {
-                queue.push(removedNode.left);
-            }
-            if (removedNode.right) {
-                queue.push(removedNode.right);
-            }
-        }
+const DFS = function(root, maxValPerLevel, height = 0) {
+    if (!root) return;
 
-        largestValuePerRow.push(currMax);
-    }
+    // update max value in curr row
+    maxValPerLevel[height] = Math.max(root.val, maxValPerLevel[height] ?? -Infinity);
 
-    return largestValuePerRow;
+    // Apply DFS to the cildren
+    DFS(root.left, maxValPerLevel, height + 1);
+    DFS(root.right, maxValPerLevel, height + 1);
 };
