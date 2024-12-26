@@ -37,38 +37,19 @@ const minimumOperations = function(root) {
 };
 
 function minSwapsToSort(arr) {
-    // Step 1: Pair elements with their indices
-    let pairedArray = arr.map((value, index) => ({ value, index }));
-    
-    // Step 2: Sort by the element values
-    pairedArray.sort((a, b) => a.value - b.value);
-    
-    // Step 3: Initialize visited array
-    let visited = new Array(arr.length).fill(false);
     let swaps = 0;
+    // {val, idx} sorted based on val ascending
+    const sortedPairs = arr.map((val, idx) => ({val, idx})).sort((a, b) => a.val - b.val);
 
-    // Step 4: Detect cycles and calculate swaps
     for (let i = 0; i < arr.length; i++) {
-        // If already visited or in the correct position, skip
-        if (visited[i] || pairedArray[i].index === i) {
-            continue;
-        }
+        const curr = sortedPairs[i];
+        if (curr.idx === i) continue; // if in the right index
 
-        // Find the cycle length
-        let cycleLength = 0;
-        let currentIndex = i;
-
-        while (!visited[currentIndex]) {
-            visited[currentIndex] = true;
-            currentIndex = pairedArray[currentIndex].index;
-            cycleLength++;
-        }
-
-        // Add the number of swaps for this cycle
-        if (cycleLength > 1) {
-            swaps += cycleLength - 1;
-        }
+        const toSwapWith = sortedPairs[curr.idx];
+        [sortedPairs[curr.idx], sortedPairs[toSwapWith.idx]] = [sortedPairs[toSwapWith.idx], sortedPairs[curr.idx]];
+        swaps++;
+        i--;
     }
 
     return swaps;
-}
+};
