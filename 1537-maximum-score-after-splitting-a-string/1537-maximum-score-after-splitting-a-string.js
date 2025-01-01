@@ -3,19 +3,20 @@
  * @return {number}
  */
 const maxScore = function(s) {
-    let [totalOnes, maxScore] = [0, 0];
-
+    let ones = 0
     for (const c of s) {
-        if (c === '1') totalOnes++;
+        if (c === '1') ones++;
     }
 
-    let [curr0, curr1] = [0, 0];
+    let [zeroes, maxScore] = [0, 0];
     for (let i = 0; i < s.length - 1; i++) {
-        if (s[i] === '0') curr0++;
-        else curr1++;
+        if (s[i] === '0'){
+            zeroes++;
+        } else {
+            ones--;
+        }
 
-        const currScore = curr0 + (totalOnes - curr1);
-        maxScore = Math.max(maxScore, currScore);
+        maxScore = Math.max(maxScore, zeroes + ones);
     }
 
     return maxScore;
