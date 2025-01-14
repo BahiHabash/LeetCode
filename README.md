@@ -38,6 +38,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
 | [1428-jump-game-iii](https://github.com/BahiHabash/LeetCode/tree/master/1428-jump-game-iii) |
+| [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -45,6 +46,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
 | [1428-jump-game-iii](https://github.com/BahiHabash/LeetCode/tree/master/1428-jump-game-iii) |
+| [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
 | [2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level](https://github.com/BahiHabash/LeetCode/tree/master/2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level) |
 ## Binary Tree
 |  |
@@ -90,6 +92,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
 | [0952-word-subsets](https://github.com/BahiHabash/LeetCode/tree/master/0952-word-subsets) |
 | [1428-jump-game-iii](https://github.com/BahiHabash/LeetCode/tree/master/1428-jump-game-iii) |
+| [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/BahiHabash/LeetCode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [2292-counting-words-with-a-given-prefix](https://github.com/BahiHabash/LeetCode/tree/master/2292-counting-words-with-a-given-prefix) |
 | [2358-number-of-ways-to-split-array](https://github.com/BahiHabash/LeetCode/tree/master/2358-number-of-ways-to-split-array) |
@@ -143,4 +146,9 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
+| [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
+## Union Find
+|  |
+| ------- |
+| [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
 <!---LeetCode Topics End-->
