@@ -37,12 +37,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0226-invert-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
+| [1428-jump-game-iii](https://github.com/BahiHabash/LeetCode/tree/master/1428-jump-game-iii) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [0226-invert-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
+| [1428-jump-game-iii](https://github.com/BahiHabash/LeetCode/tree/master/1428-jump-game-iii) |
 | [2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level](https://github.com/BahiHabash/LeetCode/tree/master/2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level) |
 ## Binary Tree
 |  |
@@ -87,6 +89,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
 | [0952-word-subsets](https://github.com/BahiHabash/LeetCode/tree/master/0952-word-subsets) |
+| [1428-jump-game-iii](https://github.com/BahiHabash/LeetCode/tree/master/1428-jump-game-iii) |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/BahiHabash/LeetCode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [2292-counting-words-with-a-given-prefix](https://github.com/BahiHabash/LeetCode/tree/master/2292-counting-words-with-a-given-prefix) |
 | [2358-number-of-ways-to-split-array](https://github.com/BahiHabash/LeetCode/tree/master/2358-number-of-ways-to-split-array) |
