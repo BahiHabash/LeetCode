@@ -5,33 +5,30 @@
  * @param {number} color
  * @return {number[][]}
  */
-function floodFill(image, sr, sc, color) { // Time: O(N), Spase: O(1)
-    const DIRECTIONS = [[1, 0], [-1, 0], [0, 1], [0, -1]];
+function floodFill(image, sr, sc, color) {
     const visited = new Set();
     const oldColor = image[sr][sc];
-
-    function DFS(image, sr, sc) {
-        const hashIdx = sr * image[0].length + sc;
-        
-        if (visited.has(hashIdx) || image[sr][sc] !== oldColor) return;
-
-        visited.add(hashIdx);
-
-        image[sr][sc] = color;
-
-        for (const [i, j] of DIRECTIONS)
-            if ( isValid(image, sr + i, sc + j) )
-                DFS(image, sr + i, sc + j);
-
-    }
+    const DIRECTIONS = [[1, 0], [-1, 0], [0, 1], [0, -1]];
 
     function isValid(image, r, c) {
         return (r >= 0) && (r < image.length) &&
                (c >= 0) && (c < image[0].length) &&
-               (image[r][c] === oldColor);
+               (image[r][c] === oldColor) && (!visited.has(r * image[0].length + c));
     }
 
-    DFS(image, sr, sc);
+    const queue = [[sr, sc]];
+
+    while (queue.length) {
+        const [r, c] = queue.shift();
+        image[r][c] = color;
+
+        for (const [i, j] of DIRECTIONS){ 
+            if ( isValid(image, r+i, c+j) ){
+                queue.push([r+i, c+j]);
+                visited.add(r * image[0].length + c);
+            }
+        }
+    }
 
     return image;
 }
