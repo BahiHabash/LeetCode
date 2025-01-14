@@ -9,30 +9,35 @@ function containsCycle(grid) {
 
     for (let r = 0; r < m; r++) {
         for (let c = 0; c < n; c++) {
-            if (!visited[r][c] && DFS(grid, r, c, grid[r][c], {r: -1, c: -1}, visited, DIRECTIONS)) {
+            if (!visited[r][c] && BFS(grid, r, c, grid[r][c], { r: -1, c: -1 }, visited, DIRECTIONS)) {
                 return true;
             }
         }
     }
 
-   return false;
+    return false;
 }
 
-function DFS(grid, r, c, color, parent, visited, DIRECTIONS) {
-    if (!isValid(grid, r, c) || grid[r][c] !== color) return false;
-
-    if (visited[r][c]) return true;
-
+function BFS(grid, r, c, color, parent, visited, DIRECTIONS) {
+    const queue = [[r, c, parent]];
     visited[r][c] = true;
-    
-    for (const [i, j] of DIRECTIONS) {
-        const newR = r + i;
-        const newC = c + j;
 
-        if (newR === parent.r && newC === parent.c) continue;
+    while (queue.length) {
+        const [r, c, parent] = queue.shift();
 
-        if (DFS(grid, newR, newC, color, {r, c}, visited, DIRECTIONS)) {
-            return true;
+        for (const [i, j] of DIRECTIONS) {
+            const [newR, newC] = [r + i, c + j];
+
+            if (
+                !isValid(grid, newR, newC) ||
+                (newR === parent.r && newC === parent.c) ||
+                (grid[newR][newC] !== color) 
+            ) continue;
+
+            if (visited[newR][newC]) return true;
+            
+            visited[newR][newC] = true;
+            queue.push([newR, newC, { r, c }]);
         }
     }
 
@@ -41,5 +46,5 @@ function DFS(grid, r, c, color, parent, visited, DIRECTIONS) {
 
 function isValid(grid, r, c) {
     return (r >= 0) && (r < grid.length) &&
-           (c >= 0) && (c < grid[0].length);
+        (c >= 0) && (c < grid[0].length);
 }
