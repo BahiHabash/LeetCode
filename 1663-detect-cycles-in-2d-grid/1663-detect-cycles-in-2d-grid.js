@@ -9,7 +9,7 @@ function containsCycle(grid) {
 
     for (let r = 0; r < m; r++) {
         for (let c = 0; c < n; c++) {
-            if (!visited[r][c] && BFS(grid, r, c, grid[r][c], { r: -1, c: -1 }, visited, DIRECTIONS)) {
+            if (!visited[r][c] && BFS(grid, r, c, grid[r][c], visited, DIRECTIONS)) {
                 return true;
             }
         }
@@ -18,26 +18,29 @@ function containsCycle(grid) {
     return false;
 }
 
-function BFS(grid, r, c, color, parent, visited, DIRECTIONS) {
-    const queue = [[r, c, parent]];
+function BFS(grid, r, c, color, visited, DIRECTIONS) {
+    const queue = [[r, c, -1, -1]]; // [currentRow, currentCol, parentRow, parentCol]
     visited[r][c] = true;
 
     while (queue.length) {
-        const [r, c, parent] = queue.shift();
+        const [currentR, currentC, parentR, parentC] = queue.shift();
 
         for (const [i, j] of DIRECTIONS) {
-            const [newR, newC] = [r + i, c + j];
+            const [newR, newC] = [currentR + i, currentC + j];
 
+            // Skip invalid cells, cells with different colors, or the parent cell
             if (
                 !isValid(grid, newR, newC) ||
-                (newR === parent.r && newC === parent.c) ||
-                (grid[newR][newC] !== color) 
+                grid[newR][newC] !== color ||
+                (newR === parentR && newC === parentC)
             ) continue;
 
+            // If the new cell is already visited, a cycle is detected
             if (visited[newR][newC]) return true;
-            
+
+            // Mark the new cell as visited and add it to the queue
             visited[newR][newC] = true;
-            queue.push([newR, newC, { r, c }]);
+            queue.push([newR, newC, currentR, currentC]);
         }
     }
 
