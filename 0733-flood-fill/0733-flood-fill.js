@@ -5,28 +5,27 @@
  * @param {number} color
  * @return {number[][]}
  */
-function floodFill(image, sr, sc, color) { // Time: O(N), Spase: O(N)
-    // Generate Directions to move to
+function floodFill(image, sr, sc, color) { // Time: O(N), Spase: O(1)
     const DIRECTIONS = [[1, 0], [-1, 0], [0, 1], [0, -1]];
-    // Create a visited Array
-    const visited = new Array(image.length);
-    for (let i = 0; i < visited.length; i++) {
-        visited[i] = new Array(image[0].length).fill(0);
-    }
+    const visited = new Set();
+    const oldColor = image[sr][sc];
 
     function DFS(image, sr, sc) {
-        if (visited[sr][sc]) return;
+        const hashIdx = sr * image[0].length + sc;
+        
+        if (visited.has(hashIdx) || image[sr][sc] !== oldColor) return;
 
-        visited[sr][sc] = true;
-
-        for (const [i, j] of DIRECTIONS)
-            if ( isValid(image, sr + i, sc + j, image[sr][sc]) )
-                DFS(image, sr + i, sc + j);
+        visited.add(hashIdx);
 
         image[sr][sc] = color;
+
+        for (const [i, j] of DIRECTIONS)
+            if ( isValid(image, sr + i, sc + j) )
+                DFS(image, sr + i, sc + j);
+
     }
 
-    function isValid(image, r, c, oldColor) {
+    function isValid(image, r, c) {
         return (r >= 0) && (r < image.length) &&
                (c >= 0) && (c < image[0].length) &&
                (image[r][c] === oldColor);
