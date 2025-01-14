@@ -1,19 +1,30 @@
 /**
  * @param {number[]} arr
  * @param {number} start
+ * @param {number} target default = 0 
  * @return {boolean}
  */
-function canReach(arr, start) {
+function canReach(arr, start, target = 0) {
     const visited = new Array(arr.length).fill(false);
 
-    function DFS(i) {
-        if (arr[i] === 0) return true;
-        if (visited[i] || i < 0 || i > arr.length) return false;
+    const queue = [start];
+    visited[start] = true;
 
-        visited[i] = true;
+    while (queue.length) {
+        const i = queue.shift();
         
-        return DFS(i + arr[i]) || DFS(i - arr[i]);
+        if (arr[i] === target) return true;
+
+        if ((i + arr[i] < arr.length) && !visited[i + arr[i]]){
+            queue.push(i + arr[i]);
+            visited[i + arr[i]] = true;
+        }
+
+        if ((i - arr[i] >= 0) && !visited[i - arr[i]]){
+            queue.push(i - arr[i]);
+            visited[i - arr[i]] = true;
+        }
     }
 
-    return DFS(start);
+    return false;
 }
