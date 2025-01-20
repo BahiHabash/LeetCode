@@ -5,25 +5,25 @@
  */
 function firstCompleteIndex (arr, mat) {
     const [m, n] = [mat.length, mat[0].length];
-    const valIndecies = new Map();
+    const valIndecies = new Array(n * m);
+    const rows = new Array(m).fill(0);
+    const coulmns = new Array(n).fill(0);
 
     for (let r = 0; r < m; r++) {
         for (let c = 0; c < n; c++) {
-            valIndecies.set(mat[r][c], { r , c });
+            valIndecies[mat[r][c]] = [r, c];
         }
     }
 
-    const rows = new Array(m).fill(n);
-    const coulmns = new Array(n).fill(m);
 
     for (let i = 0; i < arr.length; i++) {
-        const {r, c} = valIndecies.get(arr[i]);
+        const [r, c] = valIndecies[arr[i]];
         
-        if (--rows[r] === 0) {
+        if (++rows[r] === n) {
             return i;
         }
 
-        if (--coulmns[c] === 0) {
+        if (++coulmns[c] === m) {
             return i;
         }
     }
