@@ -3,25 +3,23 @@
  * @param {string} s
  * @return {boolean}
  */
-const wordPattern = function(pattern, s) {    
-    words = s.split(' ');
-    
-    if (words.length !== pattern.length) 
-        return false;
+function wordPattern (pattern, s) {
+    const words = s.split(' ');   // extract words
+    const wordsMap = new Map();   // {word: index}
+    const patternMap = new Map(); // {char: index}
 
-    wordsMap = new Map();
-    patternMap = new Map();
+    if (words.length !== pattern.length) return false;
 
     for (let i = 0; i < words.length; i++) {
-        const word = words[i];
-        const patternChar = pattern[i];
-
-        if (wordsMap.get(word) !== patternMap.get(patternChar))
+        // if previous occurance doesn't match that breaks the pattern
+        if (wordsMap.get(words[i]) !== patternMap.get(pattern[i])) {
             return false;
-        
-        wordsMap.set(word, i);
-        patternMap.set(patternChar, i);
+        } 
+
+        // update the occurance index
+        wordsMap.set(words[i], i);
+        patternMap.set(pattern[i], i);
     }
 
     return true;
-};
+}
