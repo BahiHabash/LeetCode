@@ -2,16 +2,29 @@
  * @param {number} n
  * @return {boolean}
  */
-const isHappy = function(n) {
-    const nums = new Set();
+function isHappy (n) {
+    const seen = new Set();
 
-    while (n > 1) {
-        n = [...`${n}`].reduce((acc, digit) => acc + digit ** 2, 0);
-        if (nums.has(n))
-            return false;
-        else
-            nums.add(n);
+    while (n !== 1) {
+        const squaresDigits = calcSquaresDigits(n);
+
+        // if we get into loop then n not happy
+        if (seen.has(squaresDigits)) return false; 
+
+        seen.add(squaresDigits)
+        n = squaresDigits;
     }
 
     return true;
-};
+}
+
+function calcSquaresDigits(n) {
+    let squaresDigits = 0;
+
+    while (n) {
+        squaresDigits += (n % 10)**2;
+        n = Math.trunc(n / 10)
+    }
+
+    return squaresDigits
+}
