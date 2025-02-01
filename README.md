@@ -21,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 |  |
 | ------- |
+| [0011-container-with-most-water](https://github.com/BahiHabash/LeetCode/tree/master/0011-container-with-most-water) |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/BahiHabash/LeetCode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0061-rotate-list](https://github.com/BahiHabash/LeetCode/tree/master/0061-rotate-list) |
 | [0141-linked-list-cycle](https://github.com/BahiHabash/LeetCode/tree/master/0141-linked-list-cycle) |
@@ -101,6 +102,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0011-container-with-most-water](https://github.com/BahiHabash/LeetCode/tree/master/0011-container-with-most-water) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
 | [0952-word-subsets](https://github.com/BahiHabash/LeetCode/tree/master/0952-word-subsets) |
 | [1428-jump-game-iii](https://github.com/BahiHabash/LeetCode/tree/master/1428-jump-game-iii) |
@@ -143,6 +145,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Greedy
 |  |
 | ------- |
+| [0011-container-with-most-water](https://github.com/BahiHabash/LeetCode/tree/master/0011-container-with-most-water) |
 | [1502-construct-k-palindrome-strings](https://github.com/BahiHabash/LeetCode/tree/master/1502-construct-k-palindrome-strings) |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/BahiHabash/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
 | [2509-minimize-xor](https://github.com/BahiHabash/LeetCode/tree/master/2509-minimize-xor) |
