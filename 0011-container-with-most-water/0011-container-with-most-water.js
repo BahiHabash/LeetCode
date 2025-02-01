@@ -2,21 +2,20 @@
  * @param {number[]} height
  * @return {number}
  */
-const maxArea = function(height) {
-    const calculateWater = (l, r) => Math.min(height[l], height[r]) * (r - l);
-    
-    let l = 0
-      , r = height.length - 1
-      , mostWater = 0;
+function maxArea(height) {
+    let maxAmount = 0;
+    let [l, r] = [0, height.length - 1];
 
     while (l < r) {
-        mostWater = Math.max(calculateWater(l, r), mostWater);
-        
-        if (height[l] < height[r])
+        const currAmount = Math.min(height[l], height[r]) * (r - l);
+        maxAmount = Math.max(currAmount, maxAmount);
+
+        if (height[l] < height[r]) {
             l++;
-        else
+        } else {
             r--;
+        }
     }
 
-    return mostWater;
-};
+    return maxAmount;
+}
