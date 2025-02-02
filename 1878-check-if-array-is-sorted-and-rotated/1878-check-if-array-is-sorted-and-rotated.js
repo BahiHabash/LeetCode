@@ -3,22 +3,13 @@
  * @return {boolean}
  */
 function check(nums) {
-    let pivot = 0;
+    let count = 0;
 
-    for (let i = 0; i < nums.length; i++) {
-        if ((nums[i - 1] ?? -Infinity) > nums[i]) {
-            pivot = i;
-            break;
-        }
+    for (let i = 1; i < nums.length; i++) {
+        count += nums[i - 1] > nums[i];
     }
 
-    const original = [...nums.slice(pivot), ...nums.slice(0, pivot)];
+    if (count !== 1) return count === 0;
 
-    for (let i = 1; i < original.length; i++) {
-        if (original[i - 1] > original[i]) {
-            return false;
-        }
-    } 
-
-    return true;
+    return nums.at(0) >= nums.at(-1);
 }
