@@ -4,19 +4,21 @@
  * @return {boolean}
  */
 function areAlmostEqual(s1, s2) {
-    if (s1.length !== s2.length) return false;
-
-    let numOfDiff = 0;
-    const charFreq = new Array(26).fill(0);
+    const s1DiffChar = [];
+    const s2DiffChar = [];
 
     for (let i = 0; i < s1.length; i++) {
-        charFreq[s1[i].charCodeAt(0) - 97]++;
-        charFreq[s2[i].charCodeAt(0) - 97]--;
-
-        numOfDiff += (s1[i] !== s2[i]);
+        if (s1[i] !== s2[i]) {
+            s1DiffChar.push(s1[i]);
+            s2DiffChar.push(s2[i]);
+        }
     }
 
-    if ((numOfDiff !== 0) && (numOfDiff !== 2)) return false;
-
-    return charFreq.every((freq) => freq === 0);
+    if (
+        (s1DiffChar.length !== s2DiffChar.length) ||
+        (! [0, 2].includes(s1DiffChar.length)) ||
+        (! [0, 2].includes(s2DiffChar.length))
+    ) return false;
+    
+    return (s1DiffChar.join('') === s2DiffChar.join('')) || (s1DiffChar[1] + s1DiffChar[0] === s2DiffChar.join(''))
 }
