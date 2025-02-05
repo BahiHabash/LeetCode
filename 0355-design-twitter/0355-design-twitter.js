@@ -1,14 +1,14 @@
 class User {
     constructor(id) {
         this.id = id;
-        this.posts = new Map();
+        this.tweets = new Map();
         this.following = new Set();
     }
 }
 
 class Twitter {
-    #users;
-    #timer;
+    #users; 
+    #timer; 
     #NEWS_FEED_LIMIT = 10;
 
     constructor() {
@@ -22,16 +22,9 @@ class Twitter {
      * @return {void}
      */
     postTweet(userId, tweetId) {
-        let user = this.#users.get(userId);
-
-        // add user to users list if not existed
-        if (!user) {
-            user = new User(userId);
-            this.#users.set(userId, user);
-        }
-
-        this.#timer++;
-        user.posts.set(tweetId, this.#timer);
+        // Get user or create if not existed
+        const user = this.#users.get(userId) ?? this.addUser(userId);
+        user.tweets.set(tweetId, this.#timer++); // Fixed typo: `tweetes` -> `tweets`
     }
 
     /** 
@@ -39,31 +32,24 @@ class Twitter {
      * @return {number[]}
      */
     getNewsFeed(userId) {
-        const newsFeed = [];
         const user = this.#users.get(userId);
 
-        // Handle if user doesn't existed
-        if (!user) return newsFeed;
-        
-        const posts = [...user.posts];
-        
+        // Handle if user doesn't exist
+        if (!user) return [];
+
+        const recentTweets = this.recentTweets(user);
+
+        // Include tweets from users being followed
         for (const followeeId of user.following) {
             const followee = this.#users.get(followeeId);
-
-            if (followee.posts) {
-                posts.push(...followee.posts);
-            }
+            if (followee) recentTweets.push(...this.recentTweets(followee));
         }
 
-        posts.sort((p1, p2) => p2[1] - p1[1]);
+        // Sort tweets by timestamp (most recent first)
+        recentTweets.sort((p1, p2) => p2[1] - p1[1]);
 
-        for (const [id, timer] of posts) {
-            if (newsFeed.length === this.#NEWS_FEED_LIMIT) break;
-
-            newsFeed.push(id);
-        }
-
-        return newsFeed;
+        // Return the top `#NEWS_FEED_LIMIT` tweets
+        return recentTweets.slice(0, this.#NEWS_FEED_LIMIT).map(([id]) => id);
     }
 
     /** 
@@ -74,19 +60,9 @@ class Twitter {
     follow(followerId, followeeId) {
         if (followerId === followeeId) return;
 
-        let [follower, followee] = [this.#users.get(followerId), this.#users.get(followeeId)];
-
-        // add follower if not existed
-        if (!follower) {
-            follower = new User(followerId);
-            this.#users.set(followerId, follower);
-        }
-
-        // add followee if not existed
-        if (!followee) {
-            followee = new User(followerId);
-            this.#users.set(followeeId, followee);
-        }
+        // Get follower & followee or create if not existed
+        const follower = this.#users.get(followerId) ?? this.addUser(followerId);      
+        const followee = this.#users.get(followeeId) ?? this.addUser(followeeId); 
 
         follower.following.add(followeeId);
     }
@@ -98,10 +74,28 @@ class Twitter {
      */
     unfollow(followerId, followeeId) {
         const user = this.#users.get(followerId);
+        if (user) user.following.delete(followeeId);
+    }
 
-        if (user) {
-            user.following.delete(followeeId);
-        }
+    /** 
+     * @param {number} userId
+     * @return {User}
+     */
+    addUser(userId) {
+        const user = new User(userId);
+        this.#users.set(userId, user);
+        return user;
+    }
+
+    /** 
+     * @param {User} user
+     * @return {[number, number][]} most recent tweets
+     */
+    recentTweets(user) {
+        if (!user) return [];
+
+        // Return the top `#NEWS_FEED_LIMIT` tweets
+        return [...user.tweets.entries()].slice(0, this.#NEWS_FEED_LIMIT + 1);
     }
 }
 
@@ -113,7 +107,3 @@ class Twitter {
  * obj.follow(followerId,followeeId)
  * obj.unfollow(followerId,followeeId)
  */
-
-
-
-      
