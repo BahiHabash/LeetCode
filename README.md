@@ -71,6 +71,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0290-word-pattern](https://github.com/BahiHabash/LeetCode/tree/master/0290-word-pattern) |
 | [0355-design-twitter](https://github.com/BahiHabash/LeetCode/tree/master/0355-design-twitter) |
 | [0952-word-subsets](https://github.com/BahiHabash/LeetCode/tree/master/0952-word-subsets) |
+| [1364-tuple-with-same-product](https://github.com/BahiHabash/LeetCode/tree/master/1364-tuple-with-same-product) |
 | [1502-construct-k-palindrome-strings](https://github.com/BahiHabash/LeetCode/tree/master/1502-construct-k-palindrome-strings) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/BahiHabash/LeetCode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/BahiHabash/LeetCode/tree/master/2059-unique-length-3-palindromic-subsequences) |
@@ -109,6 +110,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0011-container-with-most-water](https://github.com/BahiHabash/LeetCode/tree/master/0011-container-with-most-water) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
 | [0952-word-subsets](https://github.com/BahiHabash/LeetCode/tree/master/0952-word-subsets) |
+| [1364-tuple-with-same-product](https://github.com/BahiHabash/LeetCode/tree/master/1364-tuple-with-same-product) |
 | [1428-jump-game-iii](https://github.com/BahiHabash/LeetCode/tree/master/1428-jump-game-iii) |
 | [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
 | [1878-check-if-array-is-sorted-and-rotated](https://github.com/BahiHabash/LeetCode/tree/master/1878-check-if-array-is-sorted-and-rotated) |
@@ -159,6 +161,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Counting
 |  |
 | ------- |
+| [1364-tuple-with-same-product](https://github.com/BahiHabash/LeetCode/tree/master/1364-tuple-with-same-product) |
 | [1502-construct-k-palindrome-strings](https://github.com/BahiHabash/LeetCode/tree/master/1502-construct-k-palindrome-strings) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/BahiHabash/LeetCode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [3455-minimum-length-of-string-after-operations](https://github.com/BahiHabash/LeetCode/tree/master/3455-minimum-length-of-string-after-operations) |
