@@ -3,21 +3,24 @@
  * @return {number}
  */
 function maximumSum(nums) {
-    const sumToNum = new Map();
+    const digitsSumToNum = new Map();
 
     for (const num of nums) {
-        const sum = sumOfDigits(num);
+        const digitsSum = sumOfDigits(num);
         
-        if (!sumToNum.has(sum)) sumToNum.set(sum , []);
+        if (!digitsSumToNum.has(digitsSum)) {
+            digitsSumToNum.set(digitsSum , []);
+        }
 
-        sumToNum.get(sum).push(num);
+        // add current num to digitsSumToNum map
+        digitsSumToNum.get(digitsSum).push(num);
     }
 
     let maxVal = -1;
 
-    for (const [sum, arr] of sumToNum.entries()) {
-        if (arr.length >= 2) {
-            maxVal = Math.max(sumOfMax2Nums(arr), maxVal);
+    for (const [sum, numsArr] of digitsSumToNum.entries()) {
+        if (numsArr.length >= 2) {
+            maxVal = Math.max(sumOfMax2Nums(numsArr), maxVal);
         }
     }
 
@@ -40,8 +43,7 @@ function sumOfMax2Nums(nums) {
 
     for (const num of nums) {
         if (max1 < num) {
-            max2 = max1;
-            max1 = num;
+            [max2, max1] = [max1, num];
         } else if (max2 < num) {
             max2 = num;
         }
