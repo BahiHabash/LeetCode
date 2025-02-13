@@ -5,12 +5,15 @@ class MinHeap {
 
     pop() {
         if (this.size() === 0) return null; // Handle empty heap case
+
         const min = this.heap[0];
         const last = this.heap.pop(); // Remove the last element
+
         if (this.size() > 0) {
             this.heap[0] = last; // Move the last element to the root
             this.heapifyDown(0); // Restore heap property
         }
+
         return min;
     }
 
@@ -30,9 +33,10 @@ class MinHeap {
 
     heapifyDown(idx) {
         const size = this.size();
+
         while (true) {
-            const leftChildIdx = 2 * idx + 1;
-            const rightChildIdx = 2 * idx + 2;
+            const leftChildIdx = this.leftChild(idx);
+            const rightChildIdx = this.rightChild(idx);
             let smallestIdx = idx;
 
             // Find the smallest among parent, left child, and right child
@@ -48,13 +52,17 @@ class MinHeap {
                 [this.heap[idx], this.heap[smallestIdx]] = [this.heap[smallestIdx], this.heap[idx]];
                 idx = smallestIdx;
             } else {
-                break; // Stop if the parent is the smallest
+                break;
             }
         }
     }
 
-    childIdx(index, isLeft = true) {
-        return 2 * index + (isLeft ? 1 : 2);
+    leftChild(index) {
+        return 2 * index + 1;
+    }
+
+    rightChild(index) {
+        return 2 * index + 2;
     }
 
     parentIdx(index) {
