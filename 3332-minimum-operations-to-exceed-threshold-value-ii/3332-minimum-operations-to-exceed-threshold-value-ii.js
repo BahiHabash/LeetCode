@@ -94,7 +94,7 @@ function minOperations(nums, k) {
 
     while (minHeap.min() < k) {
         const [min1, min2] = [minHeap.pop(), minHeap.pop()];
-        minHeap.push(Math.min(min1, min2) * 2 + Math.max(min1, min2));
+        minHeap.push(min1 * 2 + min2);
         minOperations++;
     }
 
