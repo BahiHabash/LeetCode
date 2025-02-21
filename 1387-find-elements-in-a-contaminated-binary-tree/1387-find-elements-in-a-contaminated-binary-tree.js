@@ -13,8 +13,6 @@ class FindElements {
     */
     constructor(root) {
         this.nums = new Set();
-
-        root.val = 0;
         this.recover(root);
     }
 
@@ -28,23 +26,15 @@ class FindElements {
 
     /** 
     * @param {TreeNode} root
-    * @param {Set[Number]} nums
+    * @param {Number} val
     * @return {TreeNode}
     */
-    recover(root) {
+    recover(root, val = 0) {
         if (!root) return;
 
-        this.nums.add(root.val);
-
-        if (root.left) {
-            root.left.val = root.val * 2 + 1;
-            this.recover(root.left);
-        }
-
-        if (root.right) { 
-            root.right.val = root.val * 2 + 2;
-            this.recover(root.right);
-        }
+        this.nums.add(val);
+        this.recover(root.left, val * 2 + 1);
+        this.recover(root.right, val * 2 + 2);
     }
 };
 
