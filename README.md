@@ -36,6 +36,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0226-invert-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
+| [1544-count-good-nodes-in-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/1544-count-good-nodes-in-binary-tree) |
 | [2384-root-equals-sum-of-children](https://github.com/BahiHabash/LeetCode/tree/master/2384-root-equals-sum-of-children) |
 | [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/BahiHabash/LeetCode/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 | [2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level](https://github.com/BahiHabash/LeetCode/tree/master/2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level) |
@@ -47,6 +48,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
 | [1428-jump-game-iii](https://github.com/BahiHabash/LeetCode/tree/master/1428-jump-game-iii) |
+| [1544-count-good-nodes-in-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/1544-count-good-nodes-in-binary-tree) |
 | [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
 | [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/BahiHabash/LeetCode/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 ## Breadth-First Search
@@ -57,6 +59,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
 | [1428-jump-game-iii](https://github.com/BahiHabash/LeetCode/tree/master/1428-jump-game-iii) |
+| [1544-count-good-nodes-in-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/1544-count-good-nodes-in-binary-tree) |
 | [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
 | [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/BahiHabash/LeetCode/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 | [2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level](https://github.com/BahiHabash/LeetCode/tree/master/2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level) |
@@ -66,6 +69,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0226-invert-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
+| [1544-count-good-nodes-in-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/1544-count-good-nodes-in-binary-tree) |
 | [2384-root-equals-sum-of-children](https://github.com/BahiHabash/LeetCode/tree/master/2384-root-equals-sum-of-children) |
 | [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/BahiHabash/LeetCode/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 | [2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level](https://github.com/BahiHabash/LeetCode/tree/master/2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level) |
