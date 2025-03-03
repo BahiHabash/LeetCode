@@ -14,5 +14,13 @@ function mergeArrays(nums1, nums2) {
         idsToValue.set(id, (idsToValue.get(id) ?? 0) + val);
     }
 
-    return [...idsToValue.entries()].sort((a, b) => a[0] - b[0]);
+    const res = [];
+
+    for (let i = 1; i <= 1000; i++) {
+        if (idsToValue.has(i)) {
+            res.push([i, idsToValue.get(i)]);
+        }
+    }
+
+    return res;
 }
