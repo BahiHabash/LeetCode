@@ -10,13 +10,14 @@ function applyOperations(nums) {
         }
     }
 
-    // get non-zero elements in the begining of the result array
-    let res = nums.filter(num => num !== 0);
-
-    // add all remaing zeroes to the end of result array
-    for (let i = res.length; i < nums.length; i++) {
-        res.push(0)
+    // shift all the 0's to the end of the array
+    let i = 0;
+    for (let j = 0; j < nums.length; j++) {
+        if (nums[j] !== 0) {
+            [nums[i], nums[j]] = [nums[j], nums[i]];
+            i++;
+        }
     }
 
-    return res;
+    return nums;
 }
