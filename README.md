@@ -206,6 +206,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0202-happy-number](https://github.com/BahiHabash/LeetCode/tree/master/0202-happy-number) |
 | [1477-product-of-the-last-k-numbers](https://github.com/BahiHabash/LeetCode/tree/master/1477-product-of-the-last-k-numbers) |
 | [2481-strictly-palindromic-number](https://github.com/BahiHabash/LeetCode/tree/master/2481-strictly-palindromic-number) |
+| [2649-count-total-number-of-colored-cells](https://github.com/BahiHabash/LeetCode/tree/master/2649-count-total-number-of-colored-cells) |
 ## Binary Search
 |  |
 | ------- |
