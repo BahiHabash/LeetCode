@@ -28,6 +28,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0019-remove-nth-node-from-end-of-list](https://github.com/BahiHabash/LeetCode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0061-rotate-list](https://github.com/BahiHabash/LeetCode/tree/master/0061-rotate-list) |
 | [0141-linked-list-cycle](https://github.com/BahiHabash/LeetCode/tree/master/0141-linked-list-cycle) |
+| [0189-rotate-array](https://github.com/BahiHabash/LeetCode/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/BahiHabash/LeetCode/tree/master/0202-happy-number) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/BahiHabash/LeetCode/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2481-strictly-palindromic-number](https://github.com/BahiHabash/LeetCode/tree/master/2481-strictly-palindromic-number) |
@@ -133,6 +134,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/BahiHabash/LeetCode/tree/master/0011-container-with-most-water) |
+| [0189-rotate-array](https://github.com/BahiHabash/LeetCode/tree/master/0189-rotate-array) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
 | [0816-design-hashset](https://github.com/BahiHabash/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/BahiHabash/LeetCode/tree/master/0817-design-hashmap) |
@@ -207,6 +209,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0069-sqrtx](https://github.com/BahiHabash/LeetCode/tree/master/0069-sqrtx) |
+| [0189-rotate-array](https://github.com/BahiHabash/LeetCode/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/BahiHabash/LeetCode/tree/master/0202-happy-number) |
 | [1477-product-of-the-last-k-numbers](https://github.com/BahiHabash/LeetCode/tree/master/1477-product-of-the-last-k-numbers) |
 | [2481-strictly-palindromic-number](https://github.com/BahiHabash/LeetCode/tree/master/2481-strictly-palindromic-number) |
