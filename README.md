@@ -30,6 +30,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0141-linked-list-cycle](https://github.com/BahiHabash/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0189-rotate-array](https://github.com/BahiHabash/LeetCode/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/BahiHabash/LeetCode/tree/master/0202-happy-number) |
+| [0768-partition-labels](https://github.com/BahiHabash/LeetCode/tree/master/0768-partition-labels) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/BahiHabash/LeetCode/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2481-strictly-palindromic-number](https://github.com/BahiHabash/LeetCode/tree/master/2481-strictly-palindromic-number) |
 | [2551-apply-operations-to-an-array](https://github.com/BahiHabash/LeetCode/tree/master/2551-apply-operations-to-an-array) |
@@ -84,6 +85,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0202-happy-number](https://github.com/BahiHabash/LeetCode/tree/master/0202-happy-number) |
 | [0290-word-pattern](https://github.com/BahiHabash/LeetCode/tree/master/0290-word-pattern) |
 | [0355-design-twitter](https://github.com/BahiHabash/LeetCode/tree/master/0355-design-twitter) |
+| [0768-partition-labels](https://github.com/BahiHabash/LeetCode/tree/master/0768-partition-labels) |
 | [0816-design-hashset](https://github.com/BahiHabash/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/BahiHabash/LeetCode/tree/master/0817-design-hashmap) |
 | [0952-word-subsets](https://github.com/BahiHabash/LeetCode/tree/master/0952-word-subsets) |
@@ -104,6 +106,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0290-word-pattern](https://github.com/BahiHabash/LeetCode/tree/master/0290-word-pattern) |
+| [0768-partition-labels](https://github.com/BahiHabash/LeetCode/tree/master/0768-partition-labels) |
 | [0952-word-subsets](https://github.com/BahiHabash/LeetCode/tree/master/0952-word-subsets) |
 | [1502-construct-k-palindrome-strings](https://github.com/BahiHabash/LeetCode/tree/master/1502-construct-k-palindrome-strings) |
 | [1537-maximum-score-after-splitting-a-string](https://github.com/BahiHabash/LeetCode/tree/master/1537-maximum-score-after-splitting-a-string) |
@@ -196,6 +199,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/BahiHabash/LeetCode/tree/master/0011-container-with-most-water) |
+| [0768-partition-labels](https://github.com/BahiHabash/LeetCode/tree/master/0768-partition-labels) |
 | [1502-construct-k-palindrome-strings](https://github.com/BahiHabash/LeetCode/tree/master/1502-construct-k-palindrome-strings) |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/BahiHabash/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
 | [2509-minimize-xor](https://github.com/BahiHabash/LeetCode/tree/master/2509-minimize-xor) |
