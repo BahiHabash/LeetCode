@@ -153,6 +153,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1364-tuple-with-same-product](https://github.com/BahiHabash/LeetCode/tree/master/1364-tuple-with-same-product) |
 | [1428-jump-game-iii](https://github.com/BahiHabash/LeetCode/tree/master/1428-jump-game-iii) |
 | [1477-product-of-the-last-k-numbers](https://github.com/BahiHabash/LeetCode/tree/master/1477-product-of-the-last-k-numbers) |
+| [1656-count-good-triplets](https://github.com/BahiHabash/LeetCode/tree/master/1656-count-good-triplets) |
 | [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
 | [1878-check-if-array-is-sorted-and-rotated](https://github.com/BahiHabash/LeetCode/tree/master/1878-check-if-array-is-sorted-and-rotated) |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/BahiHabash/LeetCode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
@@ -299,5 +300,6 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Enumeration
 |  |
 | ------- |
+| [1656-count-good-triplets](https://github.com/BahiHabash/LeetCode/tree/master/1656-count-good-triplets) |
 | [2998-count-symmetric-integers](https://github.com/BahiHabash/LeetCode/tree/master/2998-count-symmetric-integers) |
 <!---LeetCode Topics End-->
