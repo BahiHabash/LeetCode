@@ -4,6 +4,6 @@ SELECT
 FROM
     Customer
 WHERE
-    referee_id IS NULL 
+    referee_id != 2
     OR 
-    referee_id != 2;
+    referee_id IS NULL;
