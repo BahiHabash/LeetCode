@@ -90,6 +90,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0290-word-pattern](https://github.com/BahiHabash/LeetCode/tree/master/0290-word-pattern) |
 | [0355-design-twitter](https://github.com/BahiHabash/LeetCode/tree/master/0355-design-twitter) |
 | [0768-partition-labels](https://github.com/BahiHabash/LeetCode/tree/master/0768-partition-labels) |
+| [0797-rabbits-in-forest](https://github.com/BahiHabash/LeetCode/tree/master/0797-rabbits-in-forest) |
 | [0816-design-hashset](https://github.com/BahiHabash/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/BahiHabash/LeetCode/tree/master/0817-design-hashmap) |
 | [0952-word-subsets](https://github.com/BahiHabash/LeetCode/tree/master/0952-word-subsets) |
@@ -148,6 +149,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0011-container-with-most-water](https://github.com/BahiHabash/LeetCode/tree/master/0011-container-with-most-water) |
 | [0189-rotate-array](https://github.com/BahiHabash/LeetCode/tree/master/0189-rotate-array) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
+| [0797-rabbits-in-forest](https://github.com/BahiHabash/LeetCode/tree/master/0797-rabbits-in-forest) |
 | [0816-design-hashset](https://github.com/BahiHabash/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/BahiHabash/LeetCode/tree/master/0817-design-hashmap) |
 | [0952-word-subsets](https://github.com/BahiHabash/LeetCode/tree/master/0952-word-subsets) |
@@ -214,6 +216,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0011-container-with-most-water](https://github.com/BahiHabash/LeetCode/tree/master/0011-container-with-most-water) |
 | [0768-partition-labels](https://github.com/BahiHabash/LeetCode/tree/master/0768-partition-labels) |
+| [0797-rabbits-in-forest](https://github.com/BahiHabash/LeetCode/tree/master/0797-rabbits-in-forest) |
 | [1502-construct-k-palindrome-strings](https://github.com/BahiHabash/LeetCode/tree/master/1502-construct-k-palindrome-strings) |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/BahiHabash/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
 | [2509-minimize-xor](https://github.com/BahiHabash/LeetCode/tree/master/2509-minimize-xor) |
@@ -230,6 +233,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0069-sqrtx](https://github.com/BahiHabash/LeetCode/tree/master/0069-sqrtx) |
 | [0189-rotate-array](https://github.com/BahiHabash/LeetCode/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/BahiHabash/LeetCode/tree/master/0202-happy-number) |
+| [0797-rabbits-in-forest](https://github.com/BahiHabash/LeetCode/tree/master/0797-rabbits-in-forest) |
 | [1477-product-of-the-last-k-numbers](https://github.com/BahiHabash/LeetCode/tree/master/1477-product-of-the-last-k-numbers) |
 | [2481-strictly-palindromic-number](https://github.com/BahiHabash/LeetCode/tree/master/2481-strictly-palindromic-number) |
 | [2649-count-total-number-of-colored-cells](https://github.com/BahiHabash/LeetCode/tree/master/2649-count-total-number-of-colored-cells) |
