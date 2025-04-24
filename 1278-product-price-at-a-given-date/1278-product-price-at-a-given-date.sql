@@ -8,7 +8,7 @@ WHERE (product_id, change_date) IN (
     GROUP BY product_id
 ) 
 
-UNION ALL
+UNION
 
 SELECT product_id, 10 AS price
 FROM Products
