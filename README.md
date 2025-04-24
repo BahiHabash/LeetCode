@@ -107,6 +107,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2473-max-sum-of-a-pair-with-equal-sum-of-digits](https://github.com/BahiHabash/LeetCode/tree/master/2473-max-sum-of-a-pair-with-equal-sum-of-digits) |
 | [2685-first-completely-painted-row-or-column](https://github.com/BahiHabash/LeetCode/tree/master/2685-first-completely-painted-row-or-column) |
 | [2707-merge-two-2d-arrays-by-summing-values](https://github.com/BahiHabash/LeetCode/tree/master/2707-merge-two-2d-arrays-by-summing-values) |
+| [2856-count-complete-subarrays-in-an-array](https://github.com/BahiHabash/LeetCode/tree/master/2856-count-complete-subarrays-in-an-array) |
 | [3227-find-missing-and-repeated-values](https://github.com/BahiHabash/LeetCode/tree/master/3227-find-missing-and-repeated-values) |
 | [3455-minimum-length-of-string-after-operations](https://github.com/BahiHabash/LeetCode/tree/master/3455-minimum-length-of-string-after-operations) |
 | [3621-minimum-operations-to-make-array-values-equal-to-k](https://github.com/BahiHabash/LeetCode/tree/master/3621-minimum-operations-to-make-array-values-equal-to-k) |
@@ -179,6 +180,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2691-count-vowel-strings-in-ranges](https://github.com/BahiHabash/LeetCode/tree/master/2691-count-vowel-strings-in-ranges) |
 | [2707-merge-two-2d-arrays-by-summing-values](https://github.com/BahiHabash/LeetCode/tree/master/2707-merge-two-2d-arrays-by-summing-values) |
 | [2792-neighboring-bitwise-xor](https://github.com/BahiHabash/LeetCode/tree/master/2792-neighboring-bitwise-xor) |
+| [2856-count-complete-subarrays-in-an-array](https://github.com/BahiHabash/LeetCode/tree/master/2856-count-complete-subarrays-in-an-array) |
 | [3152-maximum-value-of-an-ordered-triplet-ii](https://github.com/BahiHabash/LeetCode/tree/master/3152-maximum-value-of-an-ordered-triplet-ii) |
 | [3154-maximum-value-of-an-ordered-triplet-i](https://github.com/BahiHabash/LeetCode/tree/master/3154-maximum-value-of-an-ordered-triplet-i) |
 | [3227-find-missing-and-repeated-values](https://github.com/BahiHabash/LeetCode/tree/master/3227-find-missing-and-repeated-values) |
@@ -307,6 +309,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2463-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/BahiHabash/LeetCode/tree/master/2463-minimum-recolors-to-get-k-consecutive-black-blocks) |
+| [2856-count-complete-subarrays-in-an-array](https://github.com/BahiHabash/LeetCode/tree/master/2856-count-complete-subarrays-in-an-array) |
 ## Enumeration
 |  |
 | ------- |
