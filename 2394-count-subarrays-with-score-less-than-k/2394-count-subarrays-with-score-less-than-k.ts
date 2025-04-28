@@ -1,42 +1,36 @@
 function countSubarrays(nums: number[], k: number): number {
     // Get prefixSum for nums array
-    const prefixSum: number[] = new Array(nums.length);
-    let prefix: number = 0
+    const prefixSum: number[] = new Array(nums.length + 1).fill(0);
 
     for (let i = 0; i < nums.length; i++) {
-        prefix += nums[i];
-        prefixSum[i] = prefix;
+        prefixSum[i + 1] = prefixSum[i] + nums[i];
     }
-    
     
     // number of non-empty subarrays of nums whose score is strictly less than k
     let count: number = 0;
     
-    for (let i = 0; i < nums.length; i++) {
-        const windowRightIndex: number = lowerBound(prefixSum, i, prefixSum.length, k);
-        const windowLength: number = windowRightIndex - i; // length of current window
-
-        // add all possible subarrays could be generated from current window
-        count += windowLength; 
+    for (let start = 0; start < prefixSum.length; start++) {
+        const end: number = lowerBound(prefixSum, start, prefixSum.length, k);
+        count += end - start + 1; // length of current window
     }
 
     return count;
 }
 
-function lowerBound(nums: number[], low: number, high: number, k: number): number {
-    let l: number = low;
-    let r: number = high;
-    let res: number = low;
+function lowerBound(nums: number[], start: number, end: number, k: number): number {
+    let l: number = start;
+    let r: number = end - 1;
+    let res: number = start - 1;
 
     while (l <= r) {
-        const mid = Math.floor(l + ((r - l) / 2));
-        const score = (nums[mid] - (nums[low - 1] || 0)) * (mid - low + 1);
+        const mid: number = l + Math.floor((r - l) / 2);
+        const score = (nums[mid + 1] - nums[start]) * (mid - start + 1);
 
         if (score < k) {
-            l = mid + 1;
+            res = mid;        // mid is a valid candidate
+            l = mid + 1;   
         } else {
-            res = mid;
-            r = mid - 1;   
+            r = mid - 1;    
         }
     }
 
