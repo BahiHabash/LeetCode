@@ -16,7 +16,7 @@ UNION ALL
     FROM MovieRating MR
     JOIN Movies M 
     ON MR.movie_id = M.movie_id
-    WHERE YEAR(MR.created_at) = '2020' AND MONTH(MR.created_at) = '2' 
+    WHERE MR.created_at LIKE '2020-02%'
     GROUP BY MR.movie_id
     ORDER BY AVG(MR.rating) DESC, M.title ASC
     LIMIT 1
