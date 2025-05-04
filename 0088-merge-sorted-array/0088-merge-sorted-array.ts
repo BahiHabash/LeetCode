@@ -7,11 +7,9 @@ function merge(nums1: number[], m: number, nums2: number[], n: number): void {
         i--;
     }
 
-    const mergedArr: number[] = [...nums1.slice(0, i + 1), ...nums2];
-
-    mergedArr.sort((a, b) => a - b);
-
-    for (let i = 0; i < mergedArr.length; i++) {
-        nums1[i] = mergedArr[i];
+    for (let j = 0; j < nums2.length; j++) {
+        nums1[++i] = nums2[j];
     }
+
+    nums1.sort((a, b) => a - b);
 };
