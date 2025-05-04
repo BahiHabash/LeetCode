@@ -2,15 +2,10 @@ function numEquivDominoPairs(dominoes: number[][]): number {
     let pairsFreq: { [key: string]: number } = {};
 
     for (const [a, b] of dominoes) {
-        const pair: string = `${a},${b}`;
-
-        if ( pairsFreq[pair] ) {
-            pairsFreq[pair]++;
-        } else {
-            const revrsePair: string = `${b},${a}`;
-            pairsFreq[revrsePair] ||= 0;
-            pairsFreq[revrsePair]++;
-        }
+        const pair: string = (a < b) ? `${a},${b}` : `${b},${a}`;
+    
+        pairsFreq[pair] ||= 0;
+        pairsFreq[pair]++;
     }
 
     let numOfPairs: number = 0;
