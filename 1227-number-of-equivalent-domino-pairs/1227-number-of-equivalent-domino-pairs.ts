@@ -11,7 +11,8 @@ function numEquivDominoPairs(dominoes: number[][]): number {
     let numOfPairs: number = 0;
 
     for (const freq of Object.values(pairsFreq)) {
-        numOfPairs += (freq * (freq - 1)) / 2;
+        if (freq > 1)
+            numOfPairs += (freq * (freq - 1)) / 2;
     }
 
     return numOfPairs;
