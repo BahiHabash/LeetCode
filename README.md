@@ -155,6 +155,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/BahiHabash/LeetCode/tree/master/0011-container-with-most-water) |
+| [0066-plus-one](https://github.com/BahiHabash/LeetCode/tree/master/0066-plus-one) |
 | [0088-merge-sorted-array](https://github.com/BahiHabash/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0189-rotate-array](https://github.com/BahiHabash/LeetCode/tree/master/0189-rotate-array) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
@@ -249,6 +250,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0066-plus-one](https://github.com/BahiHabash/LeetCode/tree/master/0066-plus-one) |
 | [0069-sqrtx](https://github.com/BahiHabash/LeetCode/tree/master/0069-sqrtx) |
 | [0189-rotate-array](https://github.com/BahiHabash/LeetCode/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/BahiHabash/LeetCode/tree/master/0202-happy-number) |
