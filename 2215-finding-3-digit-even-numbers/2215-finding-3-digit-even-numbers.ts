@@ -1,19 +1,23 @@
 function findEvenNumbers(digits: number[]): number[] {
-    const ans: number[] = [];
+    const digitsFreq = new Array(10).fill(0);
 
-    for (let i = 0; i < digits.length; i++) {
-        if (digits[i] === 0) continue;
+    for (const d of digits) {
+        digitsFreq[d]++;
+    }
 
-        for (let j = 0; j < digits.length; j++) {
-            if (i === j) continue;
-
-            for (let k = 0; k < digits.length; k++) {
-                if ((i === k) || (j === k) || (digits[k] % 2 === 1)) continue;
-                const num: number = (digits[i] * 100) + (digits[j] * 10) + (digits[k]);
-                ans.push(num);
-            }
+    let ans: number[] = [];
+    
+    for (let num = 100; num <= 999; num += 2) {
+        const numDigitsFreq = new Array(10).fill(0);
+        for (const d of [...`${num}`]) {
+            numDigitsFreq[+d]++;
+        }
+        
+        const isValid: boolean = numDigitsFreq.every((freq, d) => digitsFreq[d] >= freq);
+        if (isValid) {
+            ans.push(num);
         }
     }
 
-    return [...new Set(ans)].sort((a, b) => a - b);
+    return ans;
 };
