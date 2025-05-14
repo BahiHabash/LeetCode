@@ -6,28 +6,30 @@ function lengthAfterTransformations(s: string, t: number): number {
     let charFreq: number[] = new Array(LETTERS_LENGTH).fill(0);
 
     for (const char of s) {
-        const idx = char.charCodeAt(0) - a_ASCII_CODE;
-        charFreq[idx]++;
+        const charIdx = char.charCodeAt(0) - a_ASCII_CODE;
+        charFreq[charIdx]++;
     }
 
-    for (let step = 0; step < t; step++) {
-        const newFreq = new Array(LETTERS_LENGTH).fill(0);
-        for (let i = 0; i < LETTERS_LENGTH; i++) {
-            const freq = charFreq[i];
-            if (i === 25) { // 'z'
-                newFreq[0] = (newFreq[0] + freq) % MOD; // 'a'
-                newFreq[1] = (newFreq[1] + freq) % MOD; // 'b'
+    for (let i = t; i > 0; i--) {
+        const currTrans: number[] = new Array(LETTERS_LENGTH).fill(0);
+
+        for (const [charIdx, freq] of charFreq.entries()) {
+            if (charIdx === 25) { // 'z' -> 'a' + 'b'
+                currTrans[0] += freq % MOD;
+                currTrans[1] += freq % MOD;
             } else {
-                newFreq[i + 1] = (newFreq[i + 1] + freq) % MOD;
+                currTrans[charIdx + 1] += freq % MOD;
             }
         }
-        charFreq = newFreq;
+
+        charFreq = currTrans;
     }
 
-    let totalLength = 0;
-    for (const freq of charFreq) {
-        totalLength = (totalLength + freq) % MOD;
+    let finalLength = 0;
+
+    for (let i = 0; i < LETTERS_LENGTH; i++) {
+        finalLength = (finalLength + charFreq[i]) % MOD;
     }
 
-    return totalLength;
+    return finalLength;
 }
