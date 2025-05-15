@@ -1,11 +1,11 @@
 function getLongestSubsequence(words: string[], groups: number[]): string[] {
-    const outputIdx: number[] = [0];
+    const output: string[] = [];
 
-    for (let i = 1; i < words.length; i++) {
-        if (groups[i] !== groups[outputIdx.at(-1)]) {
-            outputIdx.push(i);
-        }
+    for (let i = 0; i < words.length; i++) {
+        if (groups[i] === groups[i + 1]) continue;
+
+        output.push(words[i]);
     }
 
-    return outputIdx.map(idx => words[idx]);
+    return output;
 };
