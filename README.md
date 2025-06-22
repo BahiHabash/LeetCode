@@ -138,6 +138,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/BahiHabash/LeetCode/tree/master/2021-remove-all-occurrences-of-a-substring) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/BahiHabash/LeetCode/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/BahiHabash/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
+| [2260-divide-a-string-into-groups-of-size-k](https://github.com/BahiHabash/LeetCode/tree/master/2260-divide-a-string-into-groups-of-size-k) |
 | [2285-design-bitset](https://github.com/BahiHabash/LeetCode/tree/master/2285-design-bitset) |
 | [2292-counting-words-with-a-given-prefix](https://github.com/BahiHabash/LeetCode/tree/master/2292-counting-words-with-a-given-prefix) |
 | [2463-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/BahiHabash/LeetCode/tree/master/2463-minimum-recolors-to-get-k-consecutive-black-blocks) |
@@ -360,6 +361,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/BahiHabash/LeetCode/tree/master/2021-remove-all-occurrences-of-a-substring) |
 | [2048-build-array-from-permutation](https://github.com/BahiHabash/LeetCode/tree/master/2048-build-array-from-permutation) |
+| [2260-divide-a-string-into-groups-of-size-k](https://github.com/BahiHabash/LeetCode/tree/master/2260-divide-a-string-into-groups-of-size-k) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/BahiHabash/LeetCode/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2428-equal-row-and-column-pairs](https://github.com/BahiHabash/LeetCode/tree/master/2428-equal-row-and-column-pairs) |
 | [2551-apply-operations-to-an-array](https://github.com/BahiHabash/LeetCode/tree/master/2551-apply-operations-to-an-array) |
