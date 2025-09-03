@@ -249,6 +249,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bit Manipulation
 |  |
 | ------- |
+| [0338-counting-bits](https://github.com/BahiHabash/LeetCode/tree/master/0338-counting-bits) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/BahiHabash/LeetCode/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2509-minimize-xor](https://github.com/BahiHabash/LeetCode/tree/master/2509-minimize-xor) |
 | [2533-bitwise-xor-of-all-pairings](https://github.com/BahiHabash/LeetCode/tree/master/2533-bitwise-xor-of-all-pairings) |
@@ -466,6 +467,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0118-pascals-triangle](https://github.com/BahiHabash/LeetCode/tree/master/0118-pascals-triangle) |
+| [0338-counting-bits](https://github.com/BahiHabash/LeetCode/tree/master/0338-counting-bits) |
 | [0868-push-dominoes](https://github.com/BahiHabash/LeetCode/tree/master/0868-push-dominoes) |
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/BahiHabash/LeetCode/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
 | [3629-total-characters-in-string-after-transformations-i](https://github.com/BahiHabash/LeetCode/tree/master/3629-total-characters-in-string-after-transformations-i) |
