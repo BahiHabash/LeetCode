@@ -1,20 +1,20 @@
 function maximumEnergy(energy: number[], k: number): number {
-    const len: number = energy.length; 
-    const absorbedEnergy: number[] = new Array(len).fill(-Infinity);
+    const absorbedEnergy = new Map<number, number>();
 
-    for (let i = 0; i < len; i++) {
-        const absEnrgIdx: number = i % k;
+    for (const [i, currEnergy] of energy.entries()) {
+        const groupId: number = i % k;
+        const groupEnergy: number = absorbedEnergy.get(groupId) || 0;
 
-        if (
-            (absorbedEnergy[absEnrgIdx] === -Infinity) ||
-            ((absorbedEnergy[absEnrgIdx] < 0) && (energy[i] < 0))
-        ) {
-            absorbedEnergy[absEnrgIdx] = energy[i];
-        } else {
-            absorbedEnergy[absEnrgIdx] = Math.max(0, absorbedEnergy[absEnrgIdx]);
-            absorbedEnergy[absEnrgIdx] += energy[i];
-        }
+        absorbedEnergy.set(groupId,  
+            Math.max(currEnergy, currEnergy + groupEnergy)
+        );
     }
 
-    return Math.max(...absorbedEnergy);
+    let maxEnergy: number = -Infinity;
+
+    for (const groupEnergy of absorbedEnergy.values()) {
+        maxEnergy = Math.max(groupEnergy, maxEnergy);
+    }
+
+    return maxEnergy;
 };
