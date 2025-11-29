@@ -244,6 +244,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3372-longest-strictly-increasing-or-strictly-decreasing-subarray](https://github.com/BahiHabash/LeetCode/tree/master/3372-longest-strictly-increasing-or-strictly-decreasing-subarray) |
 | [3383-taking-maximum-energy-from-the-mystic-dungeon](https://github.com/BahiHabash/LeetCode/tree/master/3383-taking-maximum-energy-from-the-mystic-dungeon) |
 | [3429-special-array-i](https://github.com/BahiHabash/LeetCode/tree/master/3429-special-array-i) |
+| [3512-minimum-operations-to-make-array-sum-divisible-by-k](https://github.com/BahiHabash/LeetCode/tree/master/3512-minimum-operations-to-make-array-sum-divisible-by-k) |
 | [3621-minimum-operations-to-make-array-values-equal-to-k](https://github.com/BahiHabash/LeetCode/tree/master/3621-minimum-operations-to-make-array-values-equal-to-k) |
 | [3627-find-minimum-time-to-reach-last-room-i](https://github.com/BahiHabash/LeetCode/tree/master/3627-find-minimum-time-to-reach-last-room-i) |
 | [3628-find-minimum-time-to-reach-last-room-ii](https://github.com/BahiHabash/LeetCode/tree/master/3628-find-minimum-time-to-reach-last-room-ii) |
@@ -328,6 +329,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3201-distribute-candies-among-children-ii](https://github.com/BahiHabash/LeetCode/tree/master/3201-distribute-candies-among-children-ii) |
 | [3227-find-missing-and-repeated-values](https://github.com/BahiHabash/LeetCode/tree/master/3227-find-missing-and-repeated-values) |
 | [3321-type-of-triangle](https://github.com/BahiHabash/LeetCode/tree/master/3321-type-of-triangle) |
+| [3512-minimum-operations-to-make-array-sum-divisible-by-k](https://github.com/BahiHabash/LeetCode/tree/master/3512-minimum-operations-to-make-array-sum-divisible-by-k) |
 | [3600-find-the-k-th-character-in-string-game-i](https://github.com/BahiHabash/LeetCode/tree/master/3600-find-the-k-th-character-in-string-game-i) |
 | [3629-total-characters-in-string-after-transformations-i](https://github.com/BahiHabash/LeetCode/tree/master/3629-total-characters-in-string-after-transformations-i) |
 | [3754-maximum-manhattan-distance-after-k-changes](https://github.com/BahiHabash/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
