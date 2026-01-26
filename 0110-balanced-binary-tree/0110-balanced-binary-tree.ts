@@ -16,22 +16,20 @@
 function isBalanced(root: TreeNode | null): boolean {
     let balanced: boolean = true;
 
-    function assignHeights(root: TreeNode): number {
-        if (!root) {
-            return 0;
+    function getDepth(root: TreeNode | null, currDepth: number = 0): number {
+        if (!root || !balanced) {
+            return currDepth;
         }
-        
-        const leftDepth: number = assignHeights(root.left);
-        const rightDepth: number = assignHeights(root.right);
-        const heightDiff: number = Math.abs(leftDepth - rightDepth);
 
-        balanced &&= heightDiff < 2;
+        const leftDepth: number = getDepth(root.left, currDepth + 1);
+        const rightDepth: number = getDepth(root.right, currDepth + 1);
 
-        return Math.max(leftDepth, rightDepth) + 1;
+        balanced &&= (Math.abs(leftDepth - rightDepth) < 2);
+
+        return Math.max(leftDepth, rightDepth);
     };
 
-    assignHeights(root);
-    
+    getDepth(root);
+
     return balanced;
 };
-
