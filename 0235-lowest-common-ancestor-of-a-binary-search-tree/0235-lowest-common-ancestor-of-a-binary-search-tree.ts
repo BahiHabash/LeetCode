@@ -16,7 +16,7 @@ function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: Tree
     let lca: TreeNode | null = null;
 
     function dfs(root: TreeNode | null): void {
-        if (root) {
+        if (root && !lca) {
             if (p.val === root.val || q.val === root.val) { // any val match current
                 lca = root;
             } else if (Math.max(p.val, q.val) < root.val) { // both are greater than current
