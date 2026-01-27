@@ -9,19 +9,20 @@ var solution = function(isBadVersion: any) {
     return function(n: number): number {
         let l: number = 1;
         let r: number = n;
+        let rounds: number = Math.ceil(Math.log2(n)) + 1;
+        let ans: number;
 
-        while (l <= r) {
+        while (rounds--) {
             const mid: number = Math.floor((l + r) / 2);
-            const prev: boolean = isBadVersion(mid - 1);
-            const curr: boolean = isBadVersion(mid);
 
-            if (!prev && curr) {
-                return mid; 
-            } else if (!prev && !curr) {
+            if (!isBadVersion(mid)) {
                 l = mid + 1;
             } else {
+                ans = mid;
                 r = mid - 1;
             }
         }
+
+        return ans;
     };
 };
