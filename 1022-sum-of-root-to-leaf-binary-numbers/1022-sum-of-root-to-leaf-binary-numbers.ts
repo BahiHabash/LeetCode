@@ -17,19 +17,12 @@ function sumRootToLeaf(root: TreeNode | null): number {
 
     let totalSum: number = 0;
 
-    function isLeafNode(root: TreeNode | null): boolean {
-        return !root.left && !root.right;
-    };
-
-    function addSum(binary: string): void {
-        totalSum += parseInt(binary, 2);
-    };
-
     function dfs(root: TreeNode | null, path: string = ''): void {
         const currPath: string = path + root.val;
 
-        if (isLeafNode(root)) {
-            addSum(currPath);
+        // if leaf node
+        if (!root.left && !root.right) {
+            totalSum += parseInt(currPath, 2);
             return;
         }
 
