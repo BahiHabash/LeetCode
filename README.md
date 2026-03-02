@@ -2,8 +2,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 <!---LeetCode Topics Start-->
 # LeetCode Topics
 ## Linked List
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/BahiHabash/LeetCode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0021-merge-two-sorted-lists](https://github.com/BahiHabash/LeetCode/tree/master/0021-merge-two-sorted-lists) |
 | [0024-swap-nodes-in-pairs](https://github.com/BahiHabash/LeetCode/tree/master/0024-swap-nodes-in-pairs) |
@@ -16,15 +16,15 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0816-design-hashset](https://github.com/BahiHabash/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/BahiHabash/LeetCode/tree/master/0817-design-hashmap) |
 ## Recursion
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0021-merge-two-sorted-lists](https://github.com/BahiHabash/LeetCode/tree/master/0021-merge-two-sorted-lists) |
 | [0024-swap-nodes-in-pairs](https://github.com/BahiHabash/LeetCode/tree/master/0024-swap-nodes-in-pairs) |
 | [0206-reverse-linked-list](https://github.com/BahiHabash/LeetCode/tree/master/0206-reverse-linked-list) |
 | [3600-find-the-k-th-character-in-string-game-i](https://github.com/BahiHabash/LeetCode/tree/master/3600-find-the-k-th-character-in-string-game-i) |
 ## Two Pointers
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0011-container-with-most-water](https://github.com/BahiHabash/LeetCode/tree/master/0011-container-with-most-water) |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/BahiHabash/LeetCode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0061-rotate-list](https://github.com/BahiHabash/LeetCode/tree/master/0061-rotate-list) |
@@ -44,8 +44,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2707-merge-two-2d-arrays-by-summing-values](https://github.com/BahiHabash/LeetCode/tree/master/2707-merge-two-2d-arrays-by-summing-values) |
 | [3683-find-the-lexicographically-largest-string-from-the-box-i](https://github.com/BahiHabash/LeetCode/tree/master/3683-find-the-lexicographically-largest-string-from-the-box-i) |
 ## Tree
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0226-invert-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/BahiHabash/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
@@ -55,8 +55,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/BahiHabash/LeetCode/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 | [2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level](https://github.com/BahiHabash/LeetCode/tree/master/2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level) |
 ## Depth-First Search
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0226-invert-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0386-lexicographical-numbers](https://github.com/BahiHabash/LeetCode/tree/master/0386-lexicographical-numbers) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
@@ -68,8 +68,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
 | [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/BahiHabash/LeetCode/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 ## Breadth-First Search
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0226-invert-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
@@ -81,8 +81,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/BahiHabash/LeetCode/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 | [2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level](https://github.com/BahiHabash/LeetCode/tree/master/2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level) |
 ## Binary Tree
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0226-invert-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/BahiHabash/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
@@ -92,8 +92,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/BahiHabash/LeetCode/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 | [2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level](https://github.com/BahiHabash/LeetCode/tree/master/2558-minimum-number-of-operations-to-sort-a-binary-tree-by-level) |
 ## Hash Table
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0073-set-matrix-zeroes](https://github.com/BahiHabash/LeetCode/tree/master/0073-set-matrix-zeroes) |
 | [0141-linked-list-cycle](https://github.com/BahiHabash/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0202-happy-number](https://github.com/BahiHabash/LeetCode/tree/master/0202-happy-number) |
@@ -131,8 +131,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3656-minimum-number-of-operations-to-make-elements-in-array-distinct](https://github.com/BahiHabash/LeetCode/tree/master/3656-minimum-number-of-operations-to-make-elements-in-array-distinct) |
 | [3754-maximum-manhattan-distance-after-k-changes](https://github.com/BahiHabash/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
 ## String
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0038-count-and-say](https://github.com/BahiHabash/LeetCode/tree/master/0038-count-and-say) |
 | [0290-word-pattern](https://github.com/BahiHabash/LeetCode/tree/master/0290-word-pattern) |
 | [0768-partition-labels](https://github.com/BahiHabash/LeetCode/tree/master/0768-partition-labels) |
@@ -141,6 +141,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1058-lexicographically-smallest-equivalent-string](https://github.com/BahiHabash/LeetCode/tree/master/1058-lexicographically-smallest-equivalent-string) |
 | [1502-construct-k-palindrome-strings](https://github.com/BahiHabash/LeetCode/tree/master/1502-construct-k-palindrome-strings) |
 | [1537-maximum-score-after-splitting-a-string](https://github.com/BahiHabash/LeetCode/tree/master/1537-maximum-score-after-splitting-a-string) |
+| [1689-partitioning-into-minimum-number-of-deci-binary-numbers](https://github.com/BahiHabash/LeetCode/tree/main/1689-partitioning-into-minimum-number-of-deci-binary-numbers/) | Medium |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/BahiHabash/LeetCode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/BahiHabash/LeetCode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/BahiHabash/LeetCode/tree/master/2021-remove-all-occurrences-of-a-substring) |
@@ -162,8 +163,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3683-find-the-lexicographically-largest-string-from-the-box-i](https://github.com/BahiHabash/LeetCode/tree/master/3683-find-the-lexicographically-largest-string-from-the-box-i) |
 | [3754-maximum-manhattan-distance-after-k-changes](https://github.com/BahiHabash/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
 ## Prefix Sum
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [1477-product-of-the-last-k-numbers](https://github.com/BahiHabash/LeetCode/tree/master/1477-product-of-the-last-k-numbers) |
 | [1537-maximum-score-after-splitting-a-string](https://github.com/BahiHabash/LeetCode/tree/master/1537-maximum-score-after-splitting-a-string) |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/BahiHabash/LeetCode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
@@ -177,8 +178,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3383-taking-maximum-energy-from-the-mystic-dungeon](https://github.com/BahiHabash/LeetCode/tree/master/3383-taking-maximum-energy-from-the-mystic-dungeon) |
 | [3639-zero-array-transformation-i](https://github.com/BahiHabash/LeetCode/tree/master/3639-zero-array-transformation-i) |
 ## Array
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0011-container-with-most-water](https://github.com/BahiHabash/LeetCode/tree/master/0011-container-with-most-water) |
 | [0066-plus-one](https://github.com/BahiHabash/LeetCode/tree/master/0066-plus-one) |
 | [0073-set-matrix-zeroes](https://github.com/BahiHabash/LeetCode/tree/master/0073-set-matrix-zeroes) |
@@ -254,8 +255,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3747-maximum-difference-between-adjacent-elements-in-a-circular-array](https://github.com/BahiHabash/LeetCode/tree/master/3747-maximum-difference-between-adjacent-elements-in-a-circular-array) |
 | [3790-fruits-into-baskets-ii](https://github.com/BahiHabash/LeetCode/tree/master/3790-fruits-into-baskets-ii) |
 ## Bit Manipulation
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0338-counting-bits](https://github.com/BahiHabash/LeetCode/tree/master/0338-counting-bits) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/BahiHabash/LeetCode/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2509-minimize-xor](https://github.com/BahiHabash/LeetCode/tree/master/2509-minimize-xor) |
@@ -263,28 +264,28 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2792-neighboring-bitwise-xor](https://github.com/BahiHabash/LeetCode/tree/master/2792-neighboring-bitwise-xor) |
 | [3600-find-the-k-th-character-in-string-game-i](https://github.com/BahiHabash/LeetCode/tree/master/3600-find-the-k-th-character-in-string-game-i) |
 ## Trie
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0386-lexicographical-numbers](https://github.com/BahiHabash/LeetCode/tree/master/0386-lexicographical-numbers) |
 | [3309-count-prefix-and-suffix-pairs-i](https://github.com/BahiHabash/LeetCode/tree/master/3309-count-prefix-and-suffix-pairs-i) |
 ## Rolling Hash
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [3309-count-prefix-and-suffix-pairs-i](https://github.com/BahiHabash/LeetCode/tree/master/3309-count-prefix-and-suffix-pairs-i) |
 ## String Matching
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [2292-counting-words-with-a-given-prefix](https://github.com/BahiHabash/LeetCode/tree/master/2292-counting-words-with-a-given-prefix) |
 | [3309-count-prefix-and-suffix-pairs-i](https://github.com/BahiHabash/LeetCode/tree/master/3309-count-prefix-and-suffix-pairs-i) |
 ## Hash Function
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0816-design-hashset](https://github.com/BahiHabash/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/BahiHabash/LeetCode/tree/master/0817-design-hashmap) |
 | [3309-count-prefix-and-suffix-pairs-i](https://github.com/BahiHabash/LeetCode/tree/master/3309-count-prefix-and-suffix-pairs-i) |
 ## Greedy
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0011-container-with-most-water](https://github.com/BahiHabash/LeetCode/tree/master/0011-container-with-most-water) |
 | [0611-valid-triangle-number](https://github.com/BahiHabash/LeetCode/tree/master/0611-valid-triangle-number) |
 | [0768-partition-labels](https://github.com/BahiHabash/LeetCode/tree/master/0768-partition-labels) |
@@ -292,6 +293,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1049-minimum-domino-rotations-for-equal-row](https://github.com/BahiHabash/LeetCode/tree/master/1049-minimum-domino-rotations-for-equal-row) |
 | [1502-construct-k-palindrome-strings](https://github.com/BahiHabash/LeetCode/tree/master/1502-construct-k-palindrome-strings) |
 | [1529-max-difference-you-can-get-from-changing-an-integer](https://github.com/BahiHabash/LeetCode/tree/master/1529-max-difference-you-can-get-from-changing-an-integer) |
+| [1689-partitioning-into-minimum-number-of-deci-binary-numbers](https://github.com/BahiHabash/LeetCode/tree/main/1689-partitioning-into-minimum-number-of-deci-binary-numbers/) | Medium |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/BahiHabash/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
 | [2387-partition-array-such-that-maximum-difference-is-k](https://github.com/BahiHabash/LeetCode/tree/master/2387-partition-array-such-that-maximum-difference-is-k) |
 | [2509-minimize-xor](https://github.com/BahiHabash/LeetCode/tree/master/2509-minimize-xor) |
@@ -299,8 +301,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/BahiHabash/LeetCode/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
 | [3241-divide-array-into-arrays-with-max-difference](https://github.com/BahiHabash/LeetCode/tree/master/3241-divide-array-into-arrays-with-max-difference) |
 ## Counting
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [1227-number-of-equivalent-domino-pairs](https://github.com/BahiHabash/LeetCode/tree/master/1227-number-of-equivalent-domino-pairs) |
 | [1364-tuple-with-same-product](https://github.com/BahiHabash/LeetCode/tree/master/1364-tuple-with-same-product) |
 | [1502-construct-k-palindrome-strings](https://github.com/BahiHabash/LeetCode/tree/master/1502-construct-k-palindrome-strings) |
@@ -310,8 +312,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3629-total-characters-in-string-after-transformations-i](https://github.com/BahiHabash/LeetCode/tree/master/3629-total-characters-in-string-after-transformations-i) |
 | [3754-maximum-manhattan-distance-after-k-changes](https://github.com/BahiHabash/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
 ## Math
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0066-plus-one](https://github.com/BahiHabash/LeetCode/tree/master/0066-plus-one) |
 | [0069-sqrtx](https://github.com/BahiHabash/LeetCode/tree/master/0069-sqrtx) |
 | [0189-rotate-array](https://github.com/BahiHabash/LeetCode/tree/master/0189-rotate-array) |
@@ -334,22 +336,22 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3629-total-characters-in-string-after-transformations-i](https://github.com/BahiHabash/LeetCode/tree/master/3629-total-characters-in-string-after-transformations-i) |
 | [3754-maximum-manhattan-distance-after-k-changes](https://github.com/BahiHabash/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
 ## Binary Search
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0069-sqrtx](https://github.com/BahiHabash/LeetCode/tree/master/0069-sqrtx) |
 | [0611-valid-triangle-number](https://github.com/BahiHabash/LeetCode/tree/master/0611-valid-triangle-number) |
 | [2392-successful-pairs-of-spells-and-potions](https://github.com/BahiHabash/LeetCode/tree/master/2392-successful-pairs-of-spells-and-potions) |
 | [2394-count-subarrays-with-score-less-than-k](https://github.com/BahiHabash/LeetCode/tree/master/2394-count-subarrays-with-score-less-than-k) |
 | [3790-fruits-into-baskets-ii](https://github.com/BahiHabash/LeetCode/tree/master/3790-fruits-into-baskets-ii) |
 ## Stack
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/BahiHabash/LeetCode/tree/master/2021-remove-all-occurrences-of-a-substring) |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/BahiHabash/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
 | [3447-clear-digits](https://github.com/BahiHabash/LeetCode/tree/master/3447-clear-digits) |
 ## Matrix
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0073-set-matrix-zeroes](https://github.com/BahiHabash/LeetCode/tree/master/0073-set-matrix-zeroes) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
 | [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
@@ -360,18 +362,18 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3627-find-minimum-time-to-reach-last-room-i](https://github.com/BahiHabash/LeetCode/tree/master/3627-find-minimum-time-to-reach-last-room-i) |
 | [3628-find-minimum-time-to-reach-last-room-ii](https://github.com/BahiHabash/LeetCode/tree/master/3628-find-minimum-time-to-reach-last-room-ii) |
 ## Union Find
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [1058-lexicographically-smallest-equivalent-string](https://github.com/BahiHabash/LeetCode/tree/master/1058-lexicographically-smallest-equivalent-string) |
 | [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
 ## Brainteaser
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [2481-strictly-palindromic-number](https://github.com/BahiHabash/LeetCode/tree/master/2481-strictly-palindromic-number) |
 | [2533-bitwise-xor-of-all-pairings](https://github.com/BahiHabash/LeetCode/tree/master/2533-bitwise-xor-of-all-pairings) |
 ## Design
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0355-design-twitter](https://github.com/BahiHabash/LeetCode/tree/master/0355-design-twitter) |
 | [0816-design-hashset](https://github.com/BahiHabash/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/BahiHabash/LeetCode/tree/master/0817-design-hashmap) |
@@ -380,8 +382,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1995-finding-pairs-with-a-certain-sum](https://github.com/BahiHabash/LeetCode/tree/master/1995-finding-pairs-with-a-certain-sum) |
 | [2285-design-bitset](https://github.com/BahiHabash/LeetCode/tree/master/2285-design-bitset) |
 ## Heap (Priority Queue)
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0355-design-twitter](https://github.com/BahiHabash/LeetCode/tree/master/0355-design-twitter) |
 | [2204-find-subsequence-of-length-k-with-the-largest-sum](https://github.com/BahiHabash/LeetCode/tree/master/2204-find-subsequence-of-length-k-with-the-largest-sum) |
 | [2473-max-sum-of-a-pair-with-equal-sum-of-digits](https://github.com/BahiHabash/LeetCode/tree/master/2473-max-sum-of-a-pair-with-equal-sum-of-digits) |
@@ -389,8 +391,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3627-find-minimum-time-to-reach-last-room-i](https://github.com/BahiHabash/LeetCode/tree/master/3627-find-minimum-time-to-reach-last-room-i) |
 | [3628-find-minimum-time-to-reach-last-room-ii](https://github.com/BahiHabash/LeetCode/tree/master/3628-find-minimum-time-to-reach-last-room-ii) |
 ## Simulation
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/BahiHabash/LeetCode/tree/master/2021-remove-all-occurrences-of-a-substring) |
 | [2048-build-array-from-permutation](https://github.com/BahiHabash/LeetCode/tree/master/2048-build-array-from-permutation) |
 | [2260-divide-a-string-into-groups-of-size-k](https://github.com/BahiHabash/LeetCode/tree/master/2260-divide-a-string-into-groups-of-size-k) |
@@ -402,8 +404,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3600-find-the-k-th-character-in-string-game-i](https://github.com/BahiHabash/LeetCode/tree/master/3600-find-the-k-th-character-in-string-game-i) |
 | [3790-fruits-into-baskets-ii](https://github.com/BahiHabash/LeetCode/tree/master/3790-fruits-into-baskets-ii) |
 ## Sorting
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0075-sort-colors](https://github.com/BahiHabash/LeetCode/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/BahiHabash/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0611-valid-triangle-number](https://github.com/BahiHabash/LeetCode/tree/master/0611-valid-triangle-number) |
@@ -415,28 +417,28 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3241-divide-array-into-arrays-with-max-difference](https://github.com/BahiHabash/LeetCode/tree/master/3241-divide-array-into-arrays-with-max-difference) |
 | [3321-type-of-triangle](https://github.com/BahiHabash/LeetCode/tree/master/3321-type-of-triangle) |
 ## Data Stream
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [1477-product-of-the-last-k-numbers](https://github.com/BahiHabash/LeetCode/tree/master/1477-product-of-the-last-k-numbers) |
 ## Sliding Window
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0940-fruit-into-baskets](https://github.com/BahiHabash/LeetCode/tree/master/0940-fruit-into-baskets) |
 | [2394-count-subarrays-with-score-less-than-k](https://github.com/BahiHabash/LeetCode/tree/master/2394-count-subarrays-with-score-less-than-k) |
 | [2463-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/BahiHabash/LeetCode/tree/master/2463-minimum-recolors-to-get-k-consecutive-black-blocks) |
 | [2856-count-complete-subarrays-in-an-array](https://github.com/BahiHabash/LeetCode/tree/master/2856-count-complete-subarrays-in-an-array) |
 | [3213-count-subarrays-where-max-element-appears-at-least-k-times](https://github.com/BahiHabash/LeetCode/tree/master/3213-count-subarrays-where-max-element-appears-at-least-k-times) |
 ## Enumeration
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [1656-count-good-triplets](https://github.com/BahiHabash/LeetCode/tree/master/1656-count-good-triplets) |
 | [2215-finding-3-digit-even-numbers](https://github.com/BahiHabash/LeetCode/tree/master/2215-finding-3-digit-even-numbers) |
 | [2998-count-symmetric-integers](https://github.com/BahiHabash/LeetCode/tree/master/2998-count-symmetric-integers) |
 | [3201-distribute-candies-among-children-ii](https://github.com/BahiHabash/LeetCode/tree/master/3201-distribute-candies-among-children-ii) |
 | [3683-find-the-lexicographically-largest-string-from-the-box-i](https://github.com/BahiHabash/LeetCode/tree/master/3683-find-the-lexicographically-largest-string-from-the-box-i) |
 ## Database
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0180-consecutive-numbers](https://github.com/BahiHabash/LeetCode/tree/master/0180-consecutive-numbers) |
 | [0197-rising-temperature](https://github.com/BahiHabash/LeetCode/tree/master/0197-rising-temperature) |
 | [0570-managers-with-at-least-5-direct-reports](https://github.com/BahiHabash/LeetCode/tree/master/0570-managers-with-at-least-5-direct-reports) |
@@ -477,33 +479,33 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2127-employees-whose-manager-left-the-company](https://github.com/BahiHabash/LeetCode/tree/master/2127-employees-whose-manager-left-the-company) |
 | [2495-number-of-unique-subjects-taught-by-each-teacher](https://github.com/BahiHabash/LeetCode/tree/master/2495-number-of-unique-subjects-taught-by-each-teacher) |
 ## Dynamic Programming
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0118-pascals-triangle](https://github.com/BahiHabash/LeetCode/tree/master/0118-pascals-triangle) |
 | [0338-counting-bits](https://github.com/BahiHabash/LeetCode/tree/master/0338-counting-bits) |
 | [0868-push-dominoes](https://github.com/BahiHabash/LeetCode/tree/master/0868-push-dominoes) |
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/BahiHabash/LeetCode/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
 | [3629-total-characters-in-string-after-transformations-i](https://github.com/BahiHabash/LeetCode/tree/master/3629-total-characters-in-string-after-transformations-i) |
 ## Graph
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [3627-find-minimum-time-to-reach-last-room-i](https://github.com/BahiHabash/LeetCode/tree/master/3627-find-minimum-time-to-reach-last-room-i) |
 | [3628-find-minimum-time-to-reach-last-room-ii](https://github.com/BahiHabash/LeetCode/tree/master/3628-find-minimum-time-to-reach-last-room-ii) |
 ## Shortest Path
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [3627-find-minimum-time-to-reach-last-room-i](https://github.com/BahiHabash/LeetCode/tree/master/3627-find-minimum-time-to-reach-last-room-i) |
 | [3628-find-minimum-time-to-reach-last-room-ii](https://github.com/BahiHabash/LeetCode/tree/master/3628-find-minimum-time-to-reach-last-room-ii) |
 ## Combinatorics
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [3201-distribute-candies-among-children-ii](https://github.com/BahiHabash/LeetCode/tree/master/3201-distribute-candies-among-children-ii) |
 ## Segment Tree
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [3790-fruits-into-baskets-ii](https://github.com/BahiHabash/LeetCode/tree/master/3790-fruits-into-baskets-ii) |
 ## Ordered Set
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [3790-fruits-into-baskets-ii](https://github.com/BahiHabash/LeetCode/tree/master/3790-fruits-into-baskets-ii) |
 <!---LeetCode Topics End-->
