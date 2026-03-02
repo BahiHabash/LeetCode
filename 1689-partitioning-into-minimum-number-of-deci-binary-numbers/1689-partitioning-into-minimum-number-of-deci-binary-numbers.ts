@@ -1,11 +1,11 @@
 function minPartitions(n: string): number {
-    let ans: number = 0;
+    let ans: string = '0';
 
     for (const digit of n) {
-        if (+digit > ans) {
-            ans = +digit;
+        if (digit > ans) {
+            ans = digit;
         }
     }
 
-    return ans;
+    return +ans;
 };
