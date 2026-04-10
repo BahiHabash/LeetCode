@@ -19,16 +19,17 @@
 function connect(root: _Node | null): _Node | null {
     if (!root) return root;
 
-    const levels: _Node[][] = [];
     const queue: _Node[] = [root];
 
     while (queue.length) {
         let len: number = queue.length;
-        const level: _Node[] = [];
 
-        while (len--) {
+        for (let i = 1; i <= len; i++) {
             const node: _Node = queue.shift();
-            level.push(node);
+            
+            if (i < len) { // attach the node.next to its right node
+                node.next = queue[0];
+            }
 
             if (node.left) {
                 queue.push(node.left);
@@ -37,16 +38,6 @@ function connect(root: _Node | null): _Node | null {
             if (node.right) {
                 queue.push(node.right);
             }
-        }
-
-        levels.push(level);
-    }
-    
-    for (const level of levels) {
-        for (let i = 0; i < level.length - 1; i++) {
-            const node = level[i];
-            const rightNode = level[i + 1];
-            node.next = rightNode;
         }
     }
 
