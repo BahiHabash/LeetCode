@@ -11,6 +11,7 @@ LeetCode questions that I've solved.
 | [0061-rotate-list](https://github.com/BahiHabash/LeetCode/tree/master/0061-rotate-list) |
 | [0083-remove-duplicates-from-sorted-list](https://github.com/BahiHabash/LeetCode/tree/master/0083-remove-duplicates-from-sorted-list) |
 | [0092-reverse-linked-list-ii](https://github.com/BahiHabash/LeetCode/tree/master/0092-reverse-linked-list-ii) |
+| [0117-populating-next-right-pointers-in-each-node-ii](https://github.com/BahiHabash/LeetCode/tree/main/0117-populating-next-right-pointers-in-each-node-ii/) | Medium |
 | [0141-linked-list-cycle](https://github.com/BahiHabash/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0206-reverse-linked-list](https://github.com/BahiHabash/LeetCode/tree/master/0206-reverse-linked-list) |
 | [0355-design-twitter](https://github.com/BahiHabash/LeetCode/tree/master/0355-design-twitter) |
@@ -47,6 +48,7 @@ LeetCode questions that I've solved.
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0117-populating-next-right-pointers-in-each-node-ii](https://github.com/BahiHabash/LeetCode/tree/main/0117-populating-next-right-pointers-in-each-node-ii/) | Medium |
 | [0226-invert-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/BahiHabash/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
@@ -58,6 +60,7 @@ LeetCode questions that I've solved.
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0117-populating-next-right-pointers-in-each-node-ii](https://github.com/BahiHabash/LeetCode/tree/main/0117-populating-next-right-pointers-in-each-node-ii/) | Medium |
 | [0226-invert-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0386-lexicographical-numbers](https://github.com/BahiHabash/LeetCode/tree/master/0386-lexicographical-numbers) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
@@ -71,6 +74,7 @@ LeetCode questions that I've solved.
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0117-populating-next-right-pointers-in-each-node-ii](https://github.com/BahiHabash/LeetCode/tree/main/0117-populating-next-right-pointers-in-each-node-ii/) | Medium |
 | [0226-invert-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
@@ -84,6 +88,7 @@ LeetCode questions that I've solved.
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0117-populating-next-right-pointers-in-each-node-ii](https://github.com/BahiHabash/LeetCode/tree/main/0117-populating-next-right-pointers-in-each-node-ii/) | Medium |
 | [0226-invert-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/0226-invert-binary-tree) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/BahiHabash/LeetCode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/BahiHabash/LeetCode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
