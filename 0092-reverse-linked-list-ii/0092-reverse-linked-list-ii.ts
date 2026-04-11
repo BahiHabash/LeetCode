@@ -17,42 +17,42 @@ function reverseBetween(head: ListNode | null, left: number, right: number): Lis
 
     const dummyHead = new ListNode(0, head);
 
-    let prev: ListNode | null = null;
-    let subListHead: ListNode;
-    let subListTail: ListNode;
-    let part1End: ListNode | null;
-    let part2Start: ListNode | null;
+    let currPos: number = 1;
+    let prev: ListNode | null = dummyHead;
+    let leftPartEnd: ListNode | null;
+    let rightPartStart: ListNode | null;
+    let targetListStart: ListNode;
+    let targetListEnd: ListNode;
 
-    for (let pos = 1; pos < right; pos++) {
-        if (pos === left) {
-            part1End = prev;
-            subListHead = head;
-        }
-
+    while (currPos < left) {
         prev = head;
         head = head.next;
+        currPos++
     }
 
-    subListTail = head;
-    part2Start = head.next;
-    subListTail.next = null;
+    leftPartEnd = prev;
+    targetListStart = head;
 
-    const [reversetListHead, reversetListEnd] = reverseLinkedList(subListHead);
-
-    if (part1End) {
-        part1End.next = reversetListHead;
-    } else { // reversed from the first node
-        dummyHead.next = reversetListHead;
+    while (currPos < right) {
+        prev = head;
+        head = head.next;
+        currPos++;
     }
 
-    // console.log([reversetListHead, reversetListEnd])
-    reversetListEnd.next = part2Start;
+    targetListEnd = head;
+    rightPartStart = head.next;
+    targetListEnd.next = null;
+
+    reverseLinkedList(targetListStart);
+
+    leftPartEnd.next = targetListEnd;
+    targetListStart.next = rightPartStart;
 
     return dummyHead.next;
 };
 
 /**
- * @return ListNode new head, end
+ * @return ListNode new head
  */
 function reverseLinkedList(head: ListNode): [ListNode, ListNode] {
     const end: ListNode | null = head;
