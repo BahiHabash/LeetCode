@@ -137,6 +137,7 @@ LeetCode questions that I've solved.
 | [3621-minimum-operations-to-make-array-values-equal-to-k](https://github.com/BahiHabash/LeetCode/tree/master/3621-minimum-operations-to-make-array-values-equal-to-k) |
 | [3629-total-characters-in-string-after-transformations-i](https://github.com/BahiHabash/LeetCode/tree/master/3629-total-characters-in-string-after-transformations-i) |
 | [3656-minimum-number-of-operations-to-make-elements-in-array-distinct](https://github.com/BahiHabash/LeetCode/tree/master/3656-minimum-number-of-operations-to-make-elements-in-array-distinct) |
+| [3741-minimum-distance-between-three-equal-elements-ii](https://github.com/BahiHabash/LeetCode/tree/main/3741-minimum-distance-between-three-equal-elements-ii/) | Medium |
 | [3754-maximum-manhattan-distance-after-k-changes](https://github.com/BahiHabash/LeetCode/tree/master/3754-maximum-manhattan-distance-after-k-changes) |
 ## String
 | Problem Name | Difficulty |
@@ -261,6 +262,7 @@ LeetCode questions that I've solved.
 | [3653-xor-after-range-multiplication-queries-i](https://github.com/BahiHabash/LeetCode/tree/main/3653-xor-after-range-multiplication-queries-i/) | Medium |
 | [3656-minimum-number-of-operations-to-make-elements-in-array-distinct](https://github.com/BahiHabash/LeetCode/tree/master/3656-minimum-number-of-operations-to-make-elements-in-array-distinct) |
 | [3685-count-subarrays-of-length-three-with-a-condition](https://github.com/BahiHabash/LeetCode/tree/master/3685-count-subarrays-of-length-three-with-a-condition) |
+| [3741-minimum-distance-between-three-equal-elements-ii](https://github.com/BahiHabash/LeetCode/tree/main/3741-minimum-distance-between-three-equal-elements-ii/) | Medium |
 | [3747-maximum-difference-between-adjacent-elements-in-a-circular-array](https://github.com/BahiHabash/LeetCode/tree/master/3747-maximum-difference-between-adjacent-elements-in-a-circular-array) |
 | [3790-fruits-into-baskets-ii](https://github.com/BahiHabash/LeetCode/tree/master/3790-fruits-into-baskets-ii) |
 ## Bit Manipulation
