@@ -15,32 +15,28 @@
 
 
 function copyRandomList(head: _Node | null): _Node | null {
-    // construct the new list
-    const oldToNew: Map<_Node, _Node> = new Map();
+    // create the new list nodes
+    const origianlToCopy: Map<_Node, _Node> = new Map();
 
-    let original: _Node = head;
-    let copy: _Node = new _Node();
-    let dummyNew: _Node = copy;
+    let originalCurrNode: _Node = head;
 
-    while (original) {
-        const newNode: _Node = new _Node(original.val);
-
-        oldToNew.set(original, newNode);
-
-        copy.next = newNode;
-        copy = copy.next;
-        original = original.next;
+    while (originalCurrNode) {
+        origianlToCopy.set(originalCurrNode, new _Node(originalCurrNode.val));
+        originalCurrNode = originalCurrNode.next;
     }
 
 
-    // link the random pointer
-    original = head;
+    // link the nodes together
+    originalCurrNode = head;
 
-    while (original) {
-        const copy = oldToNew.get(original);
-        copy.random = oldToNew.get(original.random) ?? null;
-        original = original.next;
+    while (originalCurrNode) {
+        const copy = origianlToCopy.get(originalCurrNode);
+
+        copy.next = origianlToCopy.get(originalCurrNode.next) ?? null;
+        copy.random = origianlToCopy.get(originalCurrNode.random) ?? null;
+
+        originalCurrNode = originalCurrNode.next;
     }
 
-    return dummyNew.next;
+    return origianlToCopy.get(head);
 };
