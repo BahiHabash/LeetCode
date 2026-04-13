@@ -18,6 +18,7 @@ LeetCode questions that I've solved.
 | [0355-design-twitter](https://github.com/BahiHabash/LeetCode/tree/master/0355-design-twitter) |
 | [0816-design-hashset](https://github.com/BahiHabash/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/BahiHabash/LeetCode/tree/master/0817-design-hashmap) |
+| [1797-design-authentication-manager](https://github.com/BahiHabash/LeetCode/tree/main/1797-design-authentication-manager/) | Medium |
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -120,6 +121,7 @@ LeetCode questions that I've solved.
 | [1500-count-largest-group](https://github.com/BahiHabash/LeetCode/tree/master/1500-count-largest-group) |
 | [1502-construct-k-palindrome-strings](https://github.com/BahiHabash/LeetCode/tree/master/1502-construct-k-palindrome-strings) |
 | [1510-find-lucky-integer-in-an-array](https://github.com/BahiHabash/LeetCode/tree/master/1510-find-lucky-integer-in-an-array) |
+| [1797-design-authentication-manager](https://github.com/BahiHabash/LeetCode/tree/main/1797-design-authentication-manager/) | Medium |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/BahiHabash/LeetCode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [1995-finding-pairs-with-a-certain-sum](https://github.com/BahiHabash/LeetCode/tree/master/1995-finding-pairs-with-a-certain-sum) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/BahiHabash/LeetCode/tree/master/2059-unique-length-3-palindromic-subsequences) |
@@ -390,6 +392,7 @@ LeetCode questions that I've solved.
 | [0817-design-hashmap](https://github.com/BahiHabash/LeetCode/tree/master/0817-design-hashmap) |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/BahiHabash/LeetCode/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
 | [1477-product-of-the-last-k-numbers](https://github.com/BahiHabash/LeetCode/tree/master/1477-product-of-the-last-k-numbers) |
+| [1797-design-authentication-manager](https://github.com/BahiHabash/LeetCode/tree/main/1797-design-authentication-manager/) | Medium |
 | [1995-finding-pairs-with-a-certain-sum](https://github.com/BahiHabash/LeetCode/tree/master/1995-finding-pairs-with-a-certain-sum) |
 | [2285-design-bitset](https://github.com/BahiHabash/LeetCode/tree/master/2285-design-bitset) |
 ## Heap (Priority Queue)
@@ -524,4 +527,8 @@ LeetCode questions that I've solved.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3653-xor-after-range-multiplication-queries-i](https://github.com/BahiHabash/LeetCode/tree/main/3653-xor-after-range-multiplication-queries-i/) | Medium |
+## Doubly-Linked List
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1797-design-authentication-manager](https://github.com/BahiHabash/LeetCode/tree/main/1797-design-authentication-manager/) | Medium |
 <!---LeetCode Topics End-->
