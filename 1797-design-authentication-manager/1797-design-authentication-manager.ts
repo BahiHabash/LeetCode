@@ -8,10 +8,13 @@ class AuthenticationManager {
     }
 
     generate(tokenId: string, currentTime: number): void {
+        this.clean(currentTime);
         this.session.set(tokenId, currentTime + this.timeToLive);
     }
 
     renew(tokenId: string, currentTime: number): void {
+        this.clean(currentTime);
+
         if ((this.session.get(tokenId) ?? 0) > currentTime) {
             this.session.delete(tokenId); // to preserv the order of operations
             this.session.set(tokenId, currentTime + this.timeToLive);
