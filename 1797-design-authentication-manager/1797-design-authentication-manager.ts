@@ -19,17 +19,16 @@ class AuthenticationManager {
     }
 
     countUnexpiredTokens(currentTime: number): number {
-        let count: number = this.session.size;
+        this.clean(currentTime);
+        return this.session.size;
+    }
 
-        for (const expiresAt of this.session.values()) {
+    private clean(currentTime: number): void {
+        for (const [tokenId, expiresAt] of this.session.entries()) {
             if (expiresAt <= currentTime) {
-                count--;
-            } else {
-                break;
+                this.session.delete(tokenId);
             }
         }
-
-        return count;
     }
 }
 
