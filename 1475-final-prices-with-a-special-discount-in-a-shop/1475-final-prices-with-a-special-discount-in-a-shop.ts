@@ -1,11 +1,11 @@
 function finalPrices(prices: number[]): number[] {
+    const stack: number[] = [];
+ 
     for (let i = 0; i < prices.length; i++) {
-        for (let j = i + 1; j < prices.length; j++) {
-            if (prices[i] >= prices[j]) {
-                prices[i] -= prices[j];
-                break;
-            }
+        while (stack.length && prices[stack.at(-1)] >= prices[i]) {
+            prices[stack.pop()] -= prices[i];
         }
+        stack.push(i);
     }
 
     return prices;
