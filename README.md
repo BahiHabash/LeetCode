@@ -211,6 +211,7 @@ LeetCode questions that I've solved.
 | [1364-tuple-with-same-product](https://github.com/BahiHabash/LeetCode/tree/master/1364-tuple-with-same-product) |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/BahiHabash/LeetCode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [1428-jump-game-iii](https://github.com/BahiHabash/LeetCode/tree/master/1428-jump-game-iii) |
+| [1475-final-prices-with-a-special-discount-in-a-shop](https://github.com/BahiHabash/LeetCode/tree/main/1475-final-prices-with-a-special-discount-in-a-shop/) | Easy |
 | [1477-product-of-the-last-k-numbers](https://github.com/BahiHabash/LeetCode/tree/master/1477-product-of-the-last-k-numbers) |
 | [1510-find-lucky-integer-in-an-array](https://github.com/BahiHabash/LeetCode/tree/master/1510-find-lucky-integer-in-an-array) |
 | [1656-count-good-triplets](https://github.com/BahiHabash/LeetCode/tree/master/1656-count-good-triplets) |
@@ -359,6 +360,7 @@ LeetCode questions that I've solved.
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1475-final-prices-with-a-special-discount-in-a-shop](https://github.com/BahiHabash/LeetCode/tree/main/1475-final-prices-with-a-special-discount-in-a-shop/) | Easy |
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/BahiHabash/LeetCode/tree/master/2021-remove-all-occurrences-of-a-substring) |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/BahiHabash/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
 | [3447-clear-digits](https://github.com/BahiHabash/LeetCode/tree/master/3447-clear-digits) |
@@ -531,4 +533,8 @@ LeetCode questions that I've solved.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1797-design-authentication-manager](https://github.com/BahiHabash/LeetCode/tree/main/1797-design-authentication-manager/) | Medium |
+## Monotonic Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1475-final-prices-with-a-special-discount-in-a-shop](https://github.com/BahiHabash/LeetCode/tree/main/1475-final-prices-with-a-special-discount-in-a-shop/) | Easy |
 <!---LeetCode Topics End-->
