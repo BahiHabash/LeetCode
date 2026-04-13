@@ -1,32 +1,31 @@
 class AuthenticationManager {
     private readonly timeToLive: number;
-    private readonly session: Record<string, number>;
+    private readonly session: Map<string, number>;
 
     constructor(timeToLive: number) {
         this.timeToLive = timeToLive;
-        this.session = {};
+        this.session = new Map;
     }
 
     generate(tokenId: string, currentTime: number): void {
-        this.session[tokenId] = currentTime + this.timeToLive;
+        this.session.set(tokenId, currentTime + this.timeToLive);
     }
 
     renew(tokenId: string, currentTime: number): void {
-        if (this.session[tokenId] > currentTime) {
-            this.session[tokenId] =  currentTime + this.timeToLive;
-        } else {
-            delete this.session[tokenId];
+        if ((this.session.get(tokenId) ?? 0) > currentTime) {
+            this.session.delete(tokenId); // to preserv the order of operations
+            this.session.set(tokenId, currentTime + this.timeToLive);
         }
     }
 
     countUnexpiredTokens(currentTime: number): number {
-        let count: number = 0;
-        
-        for (const [tokenId, expireTime] of Object.entries(this.session)) {
-            if (expireTime > currentTime) {
-                count++;
+        let count: number = this.session.size;
+
+        for (const expiresAt of this.session.values()) {
+            if (expiresAt <= currentTime) {
+                count--;
             } else {
-                delete this.session[tokenId];
+                break;
             }
         }
 
