@@ -144,6 +144,7 @@ LeetCode questions that I've solved.
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0020-valid-parentheses](https://github.com/BahiHabash/LeetCode/tree/main/0020-valid-parentheses/) | Easy |
 | [0038-count-and-say](https://github.com/BahiHabash/LeetCode/tree/master/0038-count-and-say) |
 | [0290-word-pattern](https://github.com/BahiHabash/LeetCode/tree/master/0290-word-pattern) |
 | [0768-partition-labels](https://github.com/BahiHabash/LeetCode/tree/master/0768-partition-labels) |
@@ -360,6 +361,7 @@ LeetCode questions that I've solved.
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0020-valid-parentheses](https://github.com/BahiHabash/LeetCode/tree/main/0020-valid-parentheses/) | Easy |
 | [1475-final-prices-with-a-special-discount-in-a-shop](https://github.com/BahiHabash/LeetCode/tree/main/1475-final-prices-with-a-special-discount-in-a-shop/) | Easy |
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/BahiHabash/LeetCode/tree/master/2021-remove-all-occurrences-of-a-substring) |
 | [2221-check-if-a-parentheses-string-can-be-valid](https://github.com/BahiHabash/LeetCode/tree/master/2221-check-if-a-parentheses-string-can-be-valid) |
