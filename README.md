@@ -106,6 +106,7 @@ LeetCode questions that I've solved.
 | [0073-set-matrix-zeroes](https://github.com/BahiHabash/LeetCode/tree/master/0073-set-matrix-zeroes) |
 | [0138-copy-list-with-random-pointer](https://github.com/BahiHabash/LeetCode/tree/main/0138-copy-list-with-random-pointer/) | Medium |
 | [0141-linked-list-cycle](https://github.com/BahiHabash/LeetCode/tree/master/0141-linked-list-cycle) |
+| [0169-majority-element](https://github.com/BahiHabash/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0202-happy-number](https://github.com/BahiHabash/LeetCode/tree/master/0202-happy-number) |
 | [0290-word-pattern](https://github.com/BahiHabash/LeetCode/tree/master/0290-word-pattern) |
 | [0355-design-twitter](https://github.com/BahiHabash/LeetCode/tree/master/0355-design-twitter) |
@@ -200,6 +201,7 @@ LeetCode questions that I've solved.
 | [0075-sort-colors](https://github.com/BahiHabash/LeetCode/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/BahiHabash/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0118-pascals-triangle](https://github.com/BahiHabash/LeetCode/tree/master/0118-pascals-triangle) |
+| [0169-majority-element](https://github.com/BahiHabash/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0189-rotate-array](https://github.com/BahiHabash/LeetCode/tree/master/0189-rotate-array) |
 | [0611-valid-triangle-number](https://github.com/BahiHabash/LeetCode/tree/master/0611-valid-triangle-number) |
 | [0733-flood-fill](https://github.com/BahiHabash/LeetCode/tree/master/0733-flood-fill) |
@@ -320,6 +322,7 @@ LeetCode questions that I've solved.
 ## Counting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0169-majority-element](https://github.com/BahiHabash/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [1227-number-of-equivalent-domino-pairs](https://github.com/BahiHabash/LeetCode/tree/master/1227-number-of-equivalent-domino-pairs) |
 | [1364-tuple-with-same-product](https://github.com/BahiHabash/LeetCode/tree/master/1364-tuple-with-same-product) |
 | [1502-construct-k-palindrome-strings](https://github.com/BahiHabash/LeetCode/tree/master/1502-construct-k-palindrome-strings) |
@@ -429,6 +432,7 @@ LeetCode questions that I've solved.
 | ------- | ------- |
 | [0075-sort-colors](https://github.com/BahiHabash/LeetCode/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/BahiHabash/LeetCode/tree/master/0088-merge-sorted-array) |
+| [0169-majority-element](https://github.com/BahiHabash/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0611-valid-triangle-number](https://github.com/BahiHabash/LeetCode/tree/master/0611-valid-triangle-number) |
 | [2204-find-subsequence-of-length-k-with-the-largest-sum](https://github.com/BahiHabash/LeetCode/tree/master/2204-find-subsequence-of-length-k-with-the-largest-sum) |
 | [2215-finding-3-digit-even-numbers](https://github.com/BahiHabash/LeetCode/tree/master/2215-finding-3-digit-even-numbers) |
@@ -532,6 +536,7 @@ LeetCode questions that I've solved.
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0169-majority-element](https://github.com/BahiHabash/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [3653-xor-after-range-multiplication-queries-i](https://github.com/BahiHabash/LeetCode/tree/main/3653-xor-after-range-multiplication-queries-i/) | Medium |
 ## Doubly-Linked List
 | Problem Name | Difficulty |
