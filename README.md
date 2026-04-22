@@ -164,6 +164,7 @@ LeetCode questions that I've solved.
 | [2260-divide-a-string-into-groups-of-size-k](https://github.com/BahiHabash/LeetCode/tree/master/2260-divide-a-string-into-groups-of-size-k) |
 | [2285-design-bitset](https://github.com/BahiHabash/LeetCode/tree/master/2285-design-bitset) |
 | [2292-counting-words-with-a-given-prefix](https://github.com/BahiHabash/LeetCode/tree/master/2292-counting-words-with-a-given-prefix) |
+| [2452-words-within-two-edits-of-dictionary](https://github.com/BahiHabash/LeetCode/tree/main/2452-words-within-two-edits-of-dictionary/) | Medium |
 | [2463-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/BahiHabash/LeetCode/tree/master/2463-minimum-recolors-to-get-k-consecutive-black-blocks) |
 | [2465-shifting-letters-ii](https://github.com/BahiHabash/LeetCode/tree/master/2465-shifting-letters-ii) |
 | [2691-count-vowel-strings-in-ranges](https://github.com/BahiHabash/LeetCode/tree/master/2691-count-vowel-strings-in-ranges) |
@@ -240,6 +241,7 @@ LeetCode questions that I've solved.
 | [2392-successful-pairs-of-spells-and-potions](https://github.com/BahiHabash/LeetCode/tree/master/2392-successful-pairs-of-spells-and-potions) |
 | [2394-count-subarrays-with-score-less-than-k](https://github.com/BahiHabash/LeetCode/tree/master/2394-count-subarrays-with-score-less-than-k) |
 | [2428-equal-row-and-column-pairs](https://github.com/BahiHabash/LeetCode/tree/master/2428-equal-row-and-column-pairs) |
+| [2452-words-within-two-edits-of-dictionary](https://github.com/BahiHabash/LeetCode/tree/main/2452-words-within-two-edits-of-dictionary/) | Medium |
 | [2465-shifting-letters-ii](https://github.com/BahiHabash/LeetCode/tree/master/2465-shifting-letters-ii) |
 | [2473-max-sum-of-a-pair-with-equal-sum-of-digits](https://github.com/BahiHabash/LeetCode/tree/master/2473-max-sum-of-a-pair-with-equal-sum-of-digits) |
 | [2533-bitwise-xor-of-all-pairings](https://github.com/BahiHabash/LeetCode/tree/master/2533-bitwise-xor-of-all-pairings) |
@@ -286,6 +288,7 @@ LeetCode questions that I've solved.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0386-lexicographical-numbers](https://github.com/BahiHabash/LeetCode/tree/master/0386-lexicographical-numbers) |
+| [2452-words-within-two-edits-of-dictionary](https://github.com/BahiHabash/LeetCode/tree/main/2452-words-within-two-edits-of-dictionary/) | Medium |
 | [3309-count-prefix-and-suffix-pairs-i](https://github.com/BahiHabash/LeetCode/tree/master/3309-count-prefix-and-suffix-pairs-i) |
 ## Rolling Hash
 | Problem Name | Difficulty |
