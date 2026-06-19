@@ -346,6 +346,7 @@ LeetCode questions that I've solved.
 | [0189-rotate-array](https://github.com/BahiHabash/LeetCode/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/BahiHabash/LeetCode/tree/master/0202-happy-number) |
 | [0797-rabbits-in-forest](https://github.com/BahiHabash/LeetCode/tree/master/0797-rabbits-in-forest) |
+| [1344-angle-between-hands-of-a-clock](https://github.com/BahiHabash/LeetCode/tree/main/1344-angle-between-hands-of-a-clock/) | Medium |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/BahiHabash/LeetCode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [1477-product-of-the-last-k-numbers](https://github.com/BahiHabash/LeetCode/tree/master/1477-product-of-the-last-k-numbers) |
 | [1500-count-largest-group](https://github.com/BahiHabash/LeetCode/tree/master/1500-count-largest-group) |
