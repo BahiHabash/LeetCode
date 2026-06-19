@@ -183,6 +183,7 @@ LeetCode questions that I've solved.
 | ------- | ------- |
 | [1477-product-of-the-last-k-numbers](https://github.com/BahiHabash/LeetCode/tree/master/1477-product-of-the-last-k-numbers) |
 | [1537-maximum-score-after-splitting-a-string](https://github.com/BahiHabash/LeetCode/tree/master/1537-maximum-score-after-splitting-a-string) |
+| [1732-find-the-highest-altitude](https://github.com/BahiHabash/LeetCode/tree/main/1732-find-the-highest-altitude/) | Easy |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/BahiHabash/LeetCode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/BahiHabash/LeetCode/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2145-grid-game](https://github.com/BahiHabash/LeetCode/tree/master/2145-grid-game) |
@@ -224,6 +225,7 @@ LeetCode questions that I've solved.
 | [1510-find-lucky-integer-in-an-array](https://github.com/BahiHabash/LeetCode/tree/master/1510-find-lucky-integer-in-an-array) |
 | [1656-count-good-triplets](https://github.com/BahiHabash/LeetCode/tree/master/1656-count-good-triplets) |
 | [1663-detect-cycles-in-2d-grid](https://github.com/BahiHabash/LeetCode/tree/master/1663-detect-cycles-in-2d-grid) |
+| [1732-find-the-highest-altitude](https://github.com/BahiHabash/LeetCode/tree/main/1732-find-the-highest-altitude/) | Easy |
 | [1878-check-if-array-is-sorted-and-rotated](https://github.com/BahiHabash/LeetCode/tree/master/1878-check-if-array-is-sorted-and-rotated) |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/BahiHabash/LeetCode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [1927-maximum-ascending-subarray-sum](https://github.com/BahiHabash/LeetCode/tree/master/1927-maximum-ascending-subarray-sum) |
