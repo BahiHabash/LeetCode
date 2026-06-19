@@ -174,6 +174,7 @@ LeetCode questions that I've solved.
 | [3309-count-prefix-and-suffix-pairs-i](https://github.com/BahiHabash/LeetCode/tree/master/3309-count-prefix-and-suffix-pairs-i) |
 | [3447-clear-digits](https://github.com/BahiHabash/LeetCode/tree/master/3447-clear-digits) |
 | [3455-minimum-length-of-string-after-operations](https://github.com/BahiHabash/LeetCode/tree/master/3455-minimum-length-of-string-after-operations) |
+| [3612-process-string-with-special-operations-i](https://github.com/BahiHabash/LeetCode/tree/main/3612-process-string-with-special-operations-i/) | Medium |
 | [3617-find-the-original-typed-string-i](https://github.com/BahiHabash/LeetCode/tree/master/3617-find-the-original-typed-string-i) |
 | [3629-total-characters-in-string-after-transformations-i](https://github.com/BahiHabash/LeetCode/tree/master/3629-total-characters-in-string-after-transformations-i) |
 | [3683-find-the-lexicographically-largest-string-from-the-box-i](https://github.com/BahiHabash/LeetCode/tree/master/3683-find-the-lexicographically-largest-string-from-the-box-i) |
@@ -433,6 +434,7 @@ LeetCode questions that I've solved.
 | [3332-minimum-operations-to-exceed-threshold-value-ii](https://github.com/BahiHabash/LeetCode/tree/master/3332-minimum-operations-to-exceed-threshold-value-ii) |
 | [3447-clear-digits](https://github.com/BahiHabash/LeetCode/tree/master/3447-clear-digits) |
 | [3600-find-the-k-th-character-in-string-game-i](https://github.com/BahiHabash/LeetCode/tree/master/3600-find-the-k-th-character-in-string-game-i) |
+| [3612-process-string-with-special-operations-i](https://github.com/BahiHabash/LeetCode/tree/main/3612-process-string-with-special-operations-i/) | Medium |
 | [3653-xor-after-range-multiplication-queries-i](https://github.com/BahiHabash/LeetCode/tree/main/3653-xor-after-range-multiplication-queries-i/) | Medium |
 | [3790-fruits-into-baskets-ii](https://github.com/BahiHabash/LeetCode/tree/master/3790-fruits-into-baskets-ii) |
 ## Sorting
